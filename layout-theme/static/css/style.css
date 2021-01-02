@@ -1,0 +1,87 @@
+
+body {
+    color: inherit;
+    background: inherit;
+}
+
+
+footer {
+	clear: both;
+	text-align: center;
+	padding-top: 2em;
+	font-size: larger;
+}
+
+html {
+
+    background: #FFFFFF;
+    color: #172429;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #3F4A83
+}
+
+
+/* Add a black background color to the top navigation */
+.banner {
+  background-color: #181C2B !important;
+  /*overflow: hidden;*/
+  margin: 10;
+  padding: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.banner a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.banner a:hover {
+  color: #6D7AB9 !important;
+}
+
+.sitelogo{
+    color: #F3F3FF !important;
+    font-size: 40px;
+    text-align: middle;
+}
+
+.nav-link {
+    color: #B3BADB !important;
+}
+
+.profilepic {
+    max-width: 250px;
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+}
+
+.pagefooter {
+    color: #3F4A83;
+    font-size: 15px;
+}
+
+.mediabutton {
+    height: 64px;
+    padding: 5px;
+}
+
+.siteicon {
+    height: 50px;
+    border-radius: 10%;
+    vertical-align: text-bottom;
+}

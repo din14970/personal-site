@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="content">
+<div class="container">
+{% block content_title %}
+<div class="row mt-3">
+    <div class="col-md-12">
+    <h2>All articles</h2>
+    </div>
+</div>
+{% endblock %}
+
+{% for article in articles_page.object_list %}
+<div class="row">
+    <div class="col-md-2">
+            <time class="published" datetime="{{ article.locale_date }}"> {{ article.locale_date }} </time>
+    </div>
+    <div class="col-md-10">
+        <h5><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">{{ article.title }}</a></h5>
+        <span class="post_metadata">
+            Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+        </span>
+        {{ article.summary }}
+        <span class="post_tags">
+            {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>
+            {% endfor %}
+        </span>
+    </div><!-- /.entry-content -->
+</div>
+<hr>
+{% endfor %}
+
+{% if articles_page.has_other_pages() %}
+    {% include 'pagination.html' %}
+{% endif %}
+
+</div>
+</section><!-- /#content -->
+{% endblock content %}
