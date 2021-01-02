@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - Categories{% endblock %}
+
+{% block content %}
+<div class="row mt-3">
+    <div class="col">
+    <h2>Categories of blog posts</h2>
+    </div>
+    <div class="col-md-auto content_center">
+        <a href="{{ SITEURL }}/{{ INDEX_SAVE_AS }}">All posts</a> | <a href="{{ SITEURL }}/tags.html">Tags</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+    <ul>
+    {% for category, articles in categories|sort %}
+        <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})</li>
+    {% endfor %}
+    </ul>
+    </div>
+</div>
+{% endblock %}

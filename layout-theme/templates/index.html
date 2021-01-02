@@ -2,13 +2,20 @@
 {% block content %}
 <section id="content">
 <div class="container">
-{% block content_title %}
+
 <div class="row mt-3">
+    <div class="col">
+{% block content_title %}
+    <h2>All blog posts</h2>
+{% endblock %}
+    </div>
+    <div class="col-md-auto content_center">
+        <a href="{{ SITEURL }}/categories.html">Categories</a> | <a href="{{ SITEURL }}/tags.html">Tags</a>
+    </div>
     <div class="col-md-12">
-    <h2>All articles</h2>
+        <hr>
     </div>
 </div>
-{% endblock %}
 
 {% for article in articles_page.object_list %}
 <div class="row">
@@ -21,19 +28,23 @@
             Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
         </span>
         {{ article.summary }}
-        <span class="post_tags">
+        <div class="articletags">
             {% for tag in article.tags %}
             <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>
             {% endfor %}
-        </span>
+        </div>
     </div><!-- /.entry-content -->
 </div>
 <hr>
 {% endfor %}
 
+<div class="row-md-0 justify-content-center">
+    <div class="col-md-12 text-center">
 {% if articles_page.has_other_pages() %}
     {% include 'pagination.html' %}
 {% endif %}
+    </div>
+</div>
 
 </div>
 </section><!-- /#content -->
