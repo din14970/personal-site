@@ -3,6 +3,11 @@
 {% block title %}{{ SITENAME }} - {{ category }} category{% endblock %}
 
 {% block content_title %}
+    <div class="col">
 <h2>Blog posts in the {{ category }} category</h2>
+    </div>
+    <div class="col-md-auto content_center">
+        <a href="{{ SITEURL }}/categories.html">Categories</a> | <a href="{{ SITEURL }}/tags.html">Tags</a> | <a href="{{ SITEURL }}/{{ INDEX_SAVE_AS }}">All posts</a>
+    </div>
 {% endblock %}
 

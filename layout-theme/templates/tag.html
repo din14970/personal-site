@@ -3,5 +3,10 @@
 {% block title %}{{ SITENAME }} - {{ tag }} tag{% endblock %}
 
 {% block content_title %}
+    <div class="col">
 <h2>Blog posts tagged with #{{ tag }}</h2>
+    </div>
+    <div class="col-md-auto content_center">
+        <a href="{{ SITEURL }}/categories.html">Categories</a> | <a href="{{ SITEURL }}/tags.html">Tags</a> | <a href="{{ SITEURL }}/{{ INDEX_SAVE_AS }}">All posts</a>
+    </div>
 {% endblock %}

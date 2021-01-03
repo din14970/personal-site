@@ -13,10 +13,15 @@ INDEX_SAVE_AS = 'blog_archive.html'
 DISPLAY_CATEGORIES_ON_MENU=False
 DISPLAY_PAGES_ON_MENU=False
 
+# plugins
+PLUGINS = [
+        "pelican.plugins.render_math"
+        ]
+
 MENUITEMS = (("Home", "/"),
-             ("Blog", "/blog_archive.html"),
              #("Projects", "/projects.html"),
              ("Resume", "/cv.html"),
+             ("Blog", "/blog_archive.html"),
              ("Contact", "/contact.html"),
              )
 
@@ -36,6 +41,9 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+DIRECT_TEMPLATES = ['index', 'categories', 'tags']
+AUTHOR_SAVE_AS = ""
 
 # Blogroll
 LINKS = ()

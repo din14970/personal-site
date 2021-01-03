@@ -11,5 +11,15 @@ This is a test of pelican static web generation
 * my friend bro
 
 ```python
-$ Here we add some python code
+import numpy as np
+bla = 20
+k = 0
+for i in range(bla):
+    k = np.sqrt(k*i)
+    r = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1
+print(k)
 ```
+
+Also some math bro
+
+$$ \sqrt{x^3 - y^x} = z $$
