@@ -1,6 +1,5 @@
 Title: Resume
 Modified: 2020-12-30 16:24
-URL: 
 Save_as: cv.html
 
 
@@ -17,7 +16,7 @@ Save_as: cv.html
 <h5>Post-doctoral researcher</h5>
 <h6>Max-Planck-Institut für Eisenforschung (MPIE), Germany</h6>
 <p>
-In my current role I focus on establishing FAIR data principles in TEM research community by developing standardized metadata representations and processing pipelines. This also involves contributing to open source software projects in the TEM community. I involved in projects related to the properties of grain boundaries, phase transformations in high entropy alloys, the structure of high entropy carbide, and measuring residual strain in Si. I mentor Ph.D. students particularly on topics related to data analysis, and I support the research group by maintaining a dokuWiki and by managing our collective code base on Gitlab.
+In my current role I focus on establishing FAIR data principles in TEM research community by developing standardized metadata representations and processing pipelines. This also involves contributing to open source software projects in the TEM community. I involved in projects related to the properties of grain boundaries, phase transformations in high entropy alloys, the structure of high entropy carbide, and measuring residual strain in silicon. I mentor Ph.D. students particularly on topics related to data analysis, and I support the research group by maintaining a dokuWiki and by managing our collective code base on Gitlab.
 </p>
 </div>
 </div>
@@ -30,7 +29,7 @@ In my current role I focus on establishing FAIR data principles in TEM research 
 <h5>Ph.D. Researcher</h5>
 <h6>University of Antwerp and SCK-CEN, Belgium</h6>
 <p>
-My research focused on the effects of radiation on Ti-stabilized stainless steel, and the role of nano-sized TiC precipitates in inhibiting deleterious material degradation. The work mainly involved nanoscale characterization with <a href="https://en.wikipedia.org/wiki/Transmission_electron_microscopy">TEM</a> and <a href="https://en.wikipedia.org/wiki/Atom_probe">APT</a>. I mentored two successful master thesis students. I performed experiments at and collaborated with researchers from the University of Michigan, the University of California, Berkeley and the Center for Advanced Energy Studies in Idaho Falls through NSUF-RTE funding. I also created a utility to help TEM operators tilt their crystalline sample to the correct diffraction conditions and implemented a basic cluster dynamics code. The project was funded through a scholarship awarded by the Belgian Nuclear Research Center (SCK-CEN).
+My research focused on the effects of radiation on Ti-stabilized stainless steel, and the role of nano-sized TiC precipitates in inhibiting deleterious material degradation. The work mainly involved nanoscale characterization with TEM and APT. I mentored two successful master thesis students. I performed experiments at and collaborated with researchers from the University of Michigan, the University of California, Berkeley and the Center for Advanced Energy Studies in Idaho Falls through NSUF-RTE funding. I also created a utility to help TEM operators tilt their crystalline sample to the correct diffraction conditions and implemented a basic cluster dynamics code. The project was funded through a scholarship awarded by the Belgian Nuclear Research Center (SCK-CEN).
 </p>
 </div>
 </div>

@@ -1,6 +1,5 @@
 Title: Projects
 Modified: 2021-01-02 16:24
-URL: 
 Save_as: projects.html
 
 <div class="row mt-3">

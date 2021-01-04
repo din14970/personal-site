@@ -1,6 +1,5 @@
 Title: Contact
 Modified: 2021-01-02 16:24
-URL: 
 Save_as: contact.html
 
 <div class="row mt-3">
@@ -32,7 +31,7 @@ Do you want to ask me a question? Do you want to collaborate on a project? Do yo
 </a>
 
 <a href="https://github.com/din14970">
-<img class="mediabutton" src="{static}/images/social_images/Github.svg" alt="Github icon">
+<img class="mediabutton" src="{static}/images/social_images/GitHub.svg" alt="Github icon">
 </a>
 
 <a href="https://www.youtube.com/user/nickcorn93/featured">
