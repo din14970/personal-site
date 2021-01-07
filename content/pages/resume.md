@@ -145,7 +145,7 @@ E. Charalampopoulou, <strong>N. Cautaerts</strong>, T. Van der Donck, D. Schryve
 <h2>Theses</h2>
 
 <p>
-<strong>N. Cautaerts</strong>, <em>Nanoscale study of ageing and irradiation induced precipitates in the DIN 1.4970 alloy</em> (Ph.D. Thesis, supervisor: D. Schryvers), University of Antwerp, 2019, <a href="https://repository.uantwerpen.be/docman/irua/83a6dc/14999.pdf">https://repository.uantwerpen.be/docman/irua/83a6dc/14999.pdf</a>
+<strong>N. Cautaerts</strong>, <em>Nanoscale study of ageing and irradiation induced precipitates in the DIN 1.4970 alloy</em> (Ph.D. Thesis, supervisor: D. Schryvers), University of Antwerp, 2019, <a href="https://repository.uantwerpen.be/docman/irua/83a6dc/14999.pdf">Download link</a>
 </p>
 
 <p>
@@ -166,11 +166,11 @@ E. Charalampopoulou, <strong>N. Cautaerts</strong>, T. Van der Donck, D. Schryve
 <div class="col-md-12">
 <h2>Thesis supervision</h2>
 <p>
-A. Youssef, <em>Influence of testing conditions and thermomechanical treatments on tensile properties of the MYRRHA cladding steel DIN 1.4970</em>, FH Aachen, 2018, <a href="https://publications.sckcen.be/portal/files/6718646/Influence_of_Testing_Conditions_and_Thermomechanical_Treatments_on_Tensile_Properties_of_The_MYRRHA_Cladding_Steel_DIN_1.4970.pdf">https://publications.sckcen.be/portal/files/6718646/Influence_of_Testing_Conditions_and_Thermomechanical_Treatments_on_Tensile_Properties_of_The_MYRRHA_Cladding_Steel_DIN_1.4970.pdf</a>
+A. Youssef, <em>Influence of testing conditions and thermomechanical treatments on tensile properties of the MYRRHA cladding steel DIN 1.4970</em>, FH Aachen, 2018, <a href="https://publications.sckcen.be/portal/files/6718646/Influence_of_Testing_Conditions_and_Thermomechanical_Treatments_on_Tensile_Properties_of_The_MYRRHA_Cladding_Steel_DIN_1.4970.pdf">Download link</a>
 </p>
 
 <p>
-R. Wuyts, <em>Influence of thermo-mechanical treatments on recrystallization behaviour in the MYRRHA cladding material DIN 1.4970</em>, KU Leuven, 2017, <a href="https://publications.sckcen.be/portal/files/4565756/Influence_of_thermo_mechanical_treatments_on_recrystallization_behaviour_in_the_MYRRHA_cladding_material_DIN1.4970.pdf">https://publications.sckcen.be/portal/files/4565756/Influence_of_thermo_mechanical_treatments_on_recrystallization_behaviour_in_the_MYRRHA_cladding_material_DIN1.4970.pdf</a>.
+R. Wuyts, <em>Influence of thermo-mechanical treatments on recrystallization behaviour in the MYRRHA cladding material DIN 1.4970</em>, KU Leuven, 2017, <a href="https://publications.sckcen.be/portal/files/4565756/Influence_of_thermo_mechanical_treatments_on_recrystallization_behaviour_in_the_MYRRHA_cladding_material_DIN1.4970.pdf">Download link</a>.
 </p>
 
 </div>
