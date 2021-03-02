@@ -249,6 +249,10 @@ Atom probe tomography experiments at FAU Erlangen, Germany, in collaboration wit
 <h6>Talks</h6>
 <ul>
     <li>
+    <em>Using eLabFTW for materials science</em>, FOSDEM, 2021, online
+    </li>
+
+    <li>
     <em>Pushing TEM data analysis beyond the limits of proprietary software</em>, EMC, 2020, online
     </li>
 
@@ -386,6 +390,15 @@ A tool for converting TVIPS-camera 4D-STEM data into other formats such as the A
 </div>
 <div class="col-md-10">
 A command line tool for printing QR code stickers for eLabFTW database entries. Ideal for digitally managing physical samples.
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-2">
+<a href="https://pypi.org/project/pyMatchSeries/"><h6>pyMatchSeries</h6></a>
+</div>
+<div class="col-md-10">
+A python wrapper around the C++ <a href="https://github.com/berkels/match-series">match-series</a> code for joint non-rigid-registration of images
 </div>
 </div>
 
