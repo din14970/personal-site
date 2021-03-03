@@ -114,6 +114,10 @@ Took part in a dual-degree exchange program with KTH in Stockholm.
 <div class="row mt-3">
 <div class="col-md-12">
 <h2>Peer-reviewed articles</h2>
+<!--<h4>2021</h4>-->
+<p>
+<strong>N. Cautaerts</strong>, E. F. Rauch, J. Jeong, G. Dehm, C. Liebscher, <em>Investigation of the orientation relationship between nano-sized G-phase precipitates and austenite with scanning nano-beam electron diffraction using a pixelated detector</em>, submitted to Scripta Materialia, preprint available on <a href="https://arxiv.org/pdf/2102.11363">arXiv:2102.11363</a>
+</p>
 <!--<h4>2020</h4>-->
 <p>
 <strong>N. Cautaerts</strong>, R. Delville, E. Stergar, J. Pakarinen, M. Verwerft, Y. Yang, C. Hofer, R. Schnitzer, S. Lamm, P. Felfer, D. Schryvers, <em>The role of Ti and TiC nanoprecipitates in radiation resistant austenitic steel: A nanoscale study</em>, Acta Materialia 197 (2020) 184-197. <a href="http://doi.org/10.1016/j.actamat.2020.07.022">doi:10.1016/j.actamat.2020.07.022.</a>

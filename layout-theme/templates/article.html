@@ -63,6 +63,7 @@
         {% for tag in article.tags %}
             <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }} </a>
         {% endfor %}
+    <hr>
     </div>
 </div>
     {% endif %}
@@ -74,8 +75,8 @@
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
    
     var disqus_config = function () {
-        this.page.url = {{ article.url }};  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = {{ article.slug }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = '{{ SITEURL }}/{{ article.url }}';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '{{ article.slug }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     
     (function() { // DON'T EDIT BELOW THIS LINE
@@ -86,7 +87,6 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
 
 </section>
 {% endblock %}
