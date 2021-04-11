@@ -56,7 +56,7 @@ SOCIAL = (('LinkedIn', 'https://www.linkedin.com/in/niels-cautaerts-a8a71142/'),
           ('Google Scholar', 'https://scholar.google.be/citations?user=b0dHQdsAAAAJ&hl=en'),
           )
 
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 10 
 
 # Theme
 THEME = "./layout-theme"
