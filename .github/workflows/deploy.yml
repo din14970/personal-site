@@ -41,7 +41,7 @@ jobs:
               key: ${{ secrets.SSHKEY }}
               port: ${{ secrets.PORT }}
               script: |
-                rm -r /var/www/html/nielscautaerts.xyz/*
+                rm -rf /var/www/html/nielscautaerts.xyz/*
 
         - name: Copy output via scp
           uses: appleboy/scp-action@master
