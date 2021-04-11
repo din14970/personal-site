@@ -25,6 +25,10 @@ jobs:
           shell: bash
           run: "pelican content -s publishconf.py"
 
+        - name: Check if we have everything
+          shell: bash
+          run: "ls -la output/"
+
         - name: Copy output contents via scp
           uses: appleboy/scp-action@master
           env:
