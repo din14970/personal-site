@@ -32,6 +32,6 @@ jobs:
               USERNAME: ${{ secrets.USER }}
               PORT: ${{ secrets.PORT }}
               KEY: ${{ secrets.SSHKEY }}
-        with:
-            source: "output/"
-            target: "/var/www/html/nielscautaerts.xyz/"
+          with:
+              source: "output/"
+              target: "/var/www/html/nielscautaerts.xyz/"
