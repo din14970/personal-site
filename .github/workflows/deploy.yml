@@ -41,4 +41,4 @@ jobs:
               port: ${{ secrets.PORT }}
               key: ${{ secrets.SSHKEY }}
               source: "output/*"
-              target: "/var/www/html/nielscautaerts.xyz/"
+              target: "/var/www/html/nielscautaerts.xyz"
