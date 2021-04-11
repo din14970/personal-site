@@ -26,12 +26,12 @@ jobs:
           run: "pelican content -s publishconf.py"
 
         - name: Copy output contents via scp
-        uses: appleboy/scp-action@master
-        env:
-            HOST: ${{ secrets.HOST }}
-            USERNAME: ${{ secrets.USER }}
-            PORT: ${{ secrets.PORT }}
-            KEY: ${{ secrets.SSHKEY }}
+          uses: appleboy/scp-action@master
+          env:
+              HOST: ${{ secrets.HOST }}
+              USERNAME: ${{ secrets.USER }}
+              PORT: ${{ secrets.PORT }}
+              KEY: ${{ secrets.SSHKEY }}
         with:
             source: "output/"
             target: "/var/www/html/nielscautaerts.xyz/"
