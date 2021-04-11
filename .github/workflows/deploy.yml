@@ -17,6 +17,10 @@ jobs:
           with:
             python-version: 3.8
 
+        - name: Install pelican with markdown
+          shell: bash
+          run: "pip install invoke pelican[markdown]"
+
         - name: Set up pelican and dependencies
           shell: bash
           run: "pip install -r requirements.txt"
