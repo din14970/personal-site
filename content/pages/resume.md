@@ -1,5 +1,5 @@
 Title: Resume
-Modified: 2020-12-30 16:24
+Modified: 2021-04-11 16:24
 Save_as: cv.html
 
 
@@ -16,7 +16,7 @@ Save_as: cv.html
 <h5>Post-doctoral researcher</h5>
 <h6>Max-Planck-Institut für Eisenforschung (MPIE), Germany</h6>
 <p>
-In my current role I focus on establishing FAIR data principles in TEM research community by developing standardized metadata representations and processing pipelines. This also involves contributing to open source software projects in the TEM community. I involved in projects related to the properties of grain boundaries, phase transformations in high entropy alloys, the structure of high entropy carbide, and measuring residual strain in silicon. I mentor Ph.D. students particularly on topics related to data analysis, and I support the research group by maintaining a dokuWiki and by managing our collective code base on Gitlab.
+In my current role I focus on establishing FAIR data principles in TEM research community by developing standardized metadata representations and processing pipelines. This also involves contributing to open source software projects in the TEM community by contributing advanced data analysis routines. I involved in projects related to the properties of grain boundaries, phase transformations in high entropy alloys, the structure of high entropy carbide, and measuring residual strain in silicon. I mentor Ph.D. students particularly on topics related to data analysis, and I support the research group by maintaining a dokuWiki, an eLabFTW instance, and by managing our collective code base on Gitlab.
 </p>
 </div>
 </div>
@@ -29,7 +29,7 @@ In my current role I focus on establishing FAIR data principles in TEM research 
 <h5>Ph.D. Researcher</h5>
 <h6>University of Antwerp and SCK-CEN, Belgium</h6>
 <p>
-My research focused on the effects of radiation on Ti-stabilized stainless steel, and the role of nano-sized TiC precipitates in inhibiting deleterious material degradation. The work mainly involved nanoscale characterization with TEM and APT. I mentored two successful master thesis students. I performed experiments at and collaborated with researchers from the University of Michigan, the University of California, Berkeley and the Center for Advanced Energy Studies in Idaho Falls through NSUF-RTE funding. I also created a utility to help TEM operators tilt their crystalline sample to the correct diffraction conditions and implemented a basic cluster dynamics code. The project was funded through a scholarship awarded by the Belgian Nuclear Research Center (SCK-CEN).
+My research focused on the effects of radiation on Ti-stabilized stainless steel, and the role of nano-sized TiC precipitates in inhibiting deleterious material degradation. The work mainly involved nanoscale characterization with TEM and APT. I mentored two successful master thesis students. I performed experiments at and collaborated with researchers from the University of Michigan, the University of California, Berkeley and the Center for Advanced Energy Studies in Idaho Falls through NSUF-RTE funding. I also created a utility to help TEM operators tilt their crystalline sample to the correct diffraction conditions and implemented a basic cluster dynamics code. The project was funded through a scholarship awarded by the Belgian Nuclear Research Center (SCK-CEN). I became an avid python programmer, user of the scientific python stack, and amateur data scientist who participated in a hackaton.
 </p>
 </div>
 </div>
@@ -118,6 +118,12 @@ Took part in a dual-degree exchange program with KTH in Stockholm.
 <p>
 <strong>N. Cautaerts</strong>, E. F. Rauch, J. Jeong, G. Dehm, C. Liebscher, <em>Investigation of the orientation relationship between nano-sized G-phase precipitates and austenite with scanning nano-beam electron diffraction using a pixelated detector</em>, submitted to Scripta Materialia, preprint available on <a href="https://arxiv.org/pdf/2102.11363">arXiv:2102.11363</a>
 </p>
+<p>
+J. Jeong, <strong>N. Cautaerts</strong>, G. Dehm, C. H. Liebscher, <em>Automated crystal orientation mapping with sub-degree angular resolution using precession electron diffraction assisted 4D scanning transmission electron microscopy</em>, submitted to Microscopy and Microanalysis, preprint available on <a href="https://arxiv.org/pdf/2102.09711">arXiv:2102.09711</a>.
+</p>
+<p>
+T. Wangle, N. Peeters, <strong>N. Cautaerts</strong>, T. Delloye, T. Cardinaels, J. Vleugels, M. Verwerft, <em>Two-step alkaline thorium dioxide precipitation A low waste method for highly sinterable ThO2</em>, J. Nucl. Mater. (2021) 152984. <a href="http://doi.org/10.1016/j.jnucmat.2021.152984">doi:10.1016/j.jnucmat.2021.152984</a>.
+</p>
 <!--<h4>2020</h4>-->
 <p>
 <strong>N. Cautaerts</strong>, R. Delville, E. Stergar, J. Pakarinen, M. Verwerft, Y. Yang, C. Hofer, R. Schnitzer, S. Lamm, P. Felfer, D. Schryvers, <em>The role of Ti and TiC nanoprecipitates in radiation resistant austenitic steel: A nanoscale study</em>, Acta Materialia 197 (2020) 184-197. <a href="http://doi.org/10.1016/j.actamat.2020.07.022">doi:10.1016/j.actamat.2020.07.022.</a>
@@ -185,8 +191,12 @@ R. Wuyts, <em>Influence of thermo-mechanical treatments on recrystallization beh
 <div class="col-md-12">
 <h2>Teaching</h2>
 <ul>
-<li>TEM demonstrator for TEM course at H.H.U. Düsseldorf in January 2021</li>
-<li>TEM demonstrator for EMAT summer school in June 2019</li>
+<li>Teach basics of TEM in SURMAT, Online, August 2021</li>
+<li>Teach python data visualisation and image processing, Online, April 2021</li>
+<li>Code in place section leader teaching python programming, Online, April 2021</li>
+<li>Lecture on the basics of radiation materials science for MPIE colleagues, Online, April 2021</li>
+<li>TEM demonstrator for TEM course, H.H.U. Düsseldorf, January 2021</li>
+<li>TEM demonstrator for EMAT summer school, Antwerp, June 2019</li>
 <li>Daily supervision and instrument training for various interns and master students from 2015 to 2019</li>
 </ul>
 </div>
@@ -248,6 +258,9 @@ Atom probe tomography experiments at FAU Erlangen, Germany, in collaboration wit
 <ul>
     <li>
     <em>Effect of ion irradiation on austenitic stainless steel at low temperatures</em>, MS&IA, 2018, Warsaw, Poland
+    </li>
+    <li>
+    <em>eLabFTW for materials science and microscopy</em>, eLabFTW users meeting at university Clausthal, 2021, Online
     </li>
 </ul>
 <h6>Talks</h6>
@@ -334,6 +347,7 @@ thermo-mechanical states</em>, 2017, proposal no. 864</li>
 </ul>
 <h6>Journals</h6>
 <ul>
+<li>Journal of Materials Engineering and Performance</li>
 <li>Acta Crystallographica Section B</li>
 <li>Engineering Computations</li>
 <li>Journal of Microscopy</li>
