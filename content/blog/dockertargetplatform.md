@@ -104,7 +104,7 @@ $ docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t nielsca
 I don't want to build these images on my laptop every time there is an update to eLabFTW.
 Therefore, I formalized the build process in a [Github Actions](https://github.com/features/actions) workflow, which can be found [here](https://github.com/din14970/elab-arm-docker/blob/master/.github/workflows/makeimage.yaml) and also below for convenience.
 
-```
+```yaml
 name: Deploy images to Docker
 
 on:

@@ -193,7 +193,7 @@ R. Wuyts, <em>Influence of thermo-mechanical treatments on recrystallization beh
 <ul>
 <li>Teach basics of TEM in SURMAT, Online, August 2021</li>
 <li>Teach python data visualisation and image processing, Online, April 2021</li>
-<li>Code in place section leader teaching python programming, Online, April 2021</li>
+<li>Stanford's <a href="https://codeinplace.stanford.edu/">Code in place</a> section leader teaching python programming, Online, April 2021</li>
 <li>Lecture on the basics of radiation materials science for MPIE colleagues, Online, April 2021</li>
 <li>TEM demonstrator for TEM course, H.H.U. Düsseldorf, January 2021</li>
 <li>TEM demonstrator for EMAT summer school, Antwerp, June 2019</li>
