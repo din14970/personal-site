@@ -266,6 +266,10 @@ Atom probe tomography experiments at FAU Erlangen, Germany, in collaboration wit
 <h6>Talks</h6>
 <ul>
     <li>
+    <em>Approaches to FAIR transmission electron microscopy data</em>, BiGmax Workshop, 2021, online
+    </li>
+
+    <li>
     <em>Using eLabFTW for materials science</em>, FOSDEM, 2021, online
     </li>
 
@@ -301,7 +305,7 @@ Atom probe tomography experiments at FAU Erlangen, Germany, in collaboration wit
 <h6>Posters</h6>
 <ul>
     <li>
-    <em>TEM data, metadata and the sample description problem</em>, BigMax workshop, 2020, online
+    <em>TEM data, metadata and the sample description problem</em>, BiGmax workshop, 2020, online
     </li>
 
     <li>
