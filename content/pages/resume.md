@@ -1,5 +1,5 @@
 Title: Resume
-Modified: 2021-04-11 16:24
+Modified: 2021-06-24 16:24
 Save_as: cv.html
 
 
@@ -16,7 +16,14 @@ Save_as: cv.html
 <h5>Post-doctoral researcher</h5>
 <h6>Max-Planck-Institut für Eisenforschung (MPIE), Germany</h6>
 <p>
-In my current role I focus on establishing FAIR data principles in TEM research community by developing standardized metadata representations and processing pipelines. This also involves contributing to open source software projects in the TEM community by contributing advanced data analysis routines. I involved in projects related to the properties of grain boundaries, phase transformations in high entropy alloys, the structure of high entropy carbide, and measuring residual strain in silicon. I mentor Ph.D. students particularly on topics related to data analysis, and I support the research group by maintaining a dokuWiki, an eLabFTW instance, and by managing our collective code base on Gitlab.
+I develop data analysis routines with Python for large electron microscopy datasets from techniques like 4D scanning transmission electron microscopy (4D-STEM) and time resolved energy dispersive X-ray spectroscopy (EDX).
+These routines employ a variety of computational techniques including GPU acceleration and machine learning.
+I made substantial contributions to a number of open source software projects in the TEM community and some in the broader scientific python ecosystem.
+These tools are leveraged in projects related to characterizing grain boundaries at the atomic scale, phase transformations and short-range order in high entropy alloys, the structure of high entropy carbide, measuring residual strain in silicon, and finding orientation relationships of small precipitates.
+Additionally, I work on establishing FAIR data principles in TEM research community by developing standardized metadata representations, processing pipelines, and data management best practices, and promote these in the community through my publications and presentations at conferences.
+In this way I also got involved in the deployment process of eLabFTW, an open source electronic lab notebook solution.
+I mentor Ph.D. students, particularly on topics related to data analysis, and I support the research group by maintaining a dokuWiki, an eLabFTW instance, and by managing our collective code base on Gitlab.
+I also give trainings and workshops and make videos related to python data analysis.
 </p>
 </div>
 </div>
@@ -29,7 +36,13 @@ In my current role I focus on establishing FAIR data principles in TEM research 
 <h5>Ph.D. Researcher</h5>
 <h6>University of Antwerp and SCK-CEN, Belgium</h6>
 <p>
-My research focused on the effects of radiation on Ti-stabilized stainless steel, and the role of nano-sized TiC precipitates in inhibiting deleterious material degradation. The work mainly involved nanoscale characterization with TEM and APT. I mentored two successful master thesis students. I performed experiments at and collaborated with researchers from the University of Michigan, the University of California, Berkeley and the Center for Advanced Energy Studies in Idaho Falls through NSUF-RTE funding. I also created a utility to help TEM operators tilt their crystalline sample to the correct diffraction conditions and implemented a basic cluster dynamics code. The project was funded through a scholarship awarded by the Belgian Nuclear Research Center (SCK-CEN). I became an avid python programmer, user of the scientific python stack, and amateur data scientist who participated in a hackaton.
+Project was funded through a scholarship awarded by the Belgian Nuclear Research Center (SCK-CEN). 
+Investigated the effects of radiation on Ti-stabilized stainless steel, and the role of nano-sized TiC precipitates in inhibiting deleterious material degradation. 
+Performed extensive nanoscale characterization with transmission electron microscopy and atom probe tomography.
+Mentored two successful master thesis students. 
+Performed experiments at, and collaborated with, researchers from the University of Michigan, the University of California, Berkeley and the Center for Advanced Energy Studies in Idaho Falls through NSUF-RTE funding, obtained through competitive proposal writing.
+Became an avid python programmer, user of the scientific python stack, and amateur data scientist who participated in a hackaton.
+Developed a python utility to help TEM operators tilt crystalline samples to the correct diffraction conditions and implemented a basic cluster dynamics code.
 </p>
 </div>
 </div>
@@ -43,7 +56,9 @@ My research focused on the effects of radiation on Ti-stabilized stainless steel
 <h5>Research assistant</h5>
 <h6>Warsaw University of Technology, Poland</h6>
 <p>
-I designed and conducted heat treatments to create nanobainitic microstructures in a Polish steel alloy. I employed thermodynamic/kinetic modelling, dilatometry, LOM, TEM, tensile testing, hardness testing, Charpy-V testing, to compare the microstructure and properties to a quenched and tempered treatment.
+Designed and conducted austempering heat treatments to create cementite-free nanobainitic microstructures in a steel alloy.
+Employed thermodynamic/kinetic modelling, dilatometry, LOM, TEM, tensile testing, hardness testing, Charpy-V testing, to compare the microstructure and properties to a quenched and tempered heat treatment.
+Nanobainitic microstructures were found to be superior.
 </p>
 </div>
 </div>
@@ -116,7 +131,7 @@ Took part in a dual-degree exchange program with KTH in Stockholm.
 <h2>Peer-reviewed articles</h2>
 <!--<h4>2021</h4>-->
 <p>
-<strong>N. Cautaerts</strong>, E. F. Rauch, J. Jeong, G. Dehm, C. Liebscher, <em>Investigation of the orientation relationship between nano-sized G-phase precipitates and austenite with scanning nano-beam electron diffraction using a pixelated detector</em>, submitted to Scripta Materialia, preprint available on <a href="https://arxiv.org/pdf/2102.11363">arXiv:2102.11363</a>
+<strong>N. Cautaerts</strong>, E. F. Rauch, J. Jeong, G. Dehm, C. Liebscher, <em>Investigation of the orientation relationship between nano-sized G-phase precipitates and austenite with scanning nano-beam electron diffraction using a pixelated detector</em>, Scripta Materialia 201 (2021) 113930. <a href="https://doi.org/10.1016/j.scriptamat.2021.113930">doi:10.1016/j.scriptamat.2021.113930</a>.
 </p>
 <p>
 J. Jeong, <strong>N. Cautaerts</strong>, G. Dehm, C. H. Liebscher, <em>Automated crystal orientation mapping with sub-degree angular resolution using precession electron diffraction assisted 4D scanning transmission electron microscopy</em>, submitted to Microscopy and Microanalysis, preprint available on <a href="https://arxiv.org/pdf/2102.09711">arXiv:2102.09711</a>.
@@ -393,7 +408,7 @@ ALPHABETA is a tool for calculating TEM stage tilt angles necessary for setting 
 <a href="https://pypi.org/project/temmeta/"><h6>TEMMETA</h6></a>
 </div>
 <div class="col-md-10">
-TEMMETA is a library to facilitate common TEM data manipulation operations.
+TEMMETA is a library to facilitate common TEM data manipulation operations. I no longer maintain it and aim to merge most of the functionality into HyperSpy.
 </div>
 </div>
 
@@ -420,7 +435,7 @@ A command line tool for printing QR code stickers for eLabFTW database entries. 
 <a href="https://pypi.org/project/pyMatchSeries/"><h6>pyMatchSeries</h6></a>
 </div>
 <div class="col-md-10">
-A python wrapper around the C++ <a href="https://github.com/berkels/match-series">match-series</a> code for joint non-rigid-registration of images
+A python wrapper around the C++ <a href="https://github.com/berkels/match-series">match-series</a> code for joint non-rigid-registration of images. Currently working on re-implementing the algorithm purely in python.
 </div>
 </div>
 
@@ -435,7 +450,7 @@ A python wrapper around the C++ <a href="https://github.com/berkels/match-series
 <a href="https://pypi.org/project/hyperspy/"><h6>Hyperspy</h6></a>
 </div>
 <div class="col-md-10">
-Hyperspy is an open source n-dimensional data analysis and visualization toolbox focused on spectral data such as EDX and EELS. I fixed some bugs and added features to the Velox EMD reader.
+Hyperspy is an open source n-dimensional data analysis and visualization toolbox focused on microscopy and spectral data such as EDX and EELS. I fixed some bugs and added features to the Velox EMD reader.
 </div>
 </div>
 
@@ -444,7 +459,36 @@ Hyperspy is an open source n-dimensional data analysis and visualization toolbox
 <a href="https://pypi.org/project/pyxem/"><h6>Pyxem</h6></a>
 </div>
 <div class="col-md-10">
-Pyxem is a hyperspy extension focused on 4D-STEM and PED data analysis. I contributed additions to the way diffraction patterns are calculated and how orientation mapping data is indexed.
+Pyxem is a hyperspy extension focused on 4D-STEM and PED data analysis. I contributed additions to the way diffraction patterns are calculated and significantly sped up the orientation indexing procedure.
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-2">
+<a href="https://pypi.org/project/atomap/"><h6>Atomap</h6></a>
+</div>
+<div class="col-md-10">
+Atomap is a tool for analyzing atomically resolved images. I sped up a number of nearest neighbor related algorithms and am working on supporting real-space strain measurements.
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-2">
+<a href="https://pypi.org/project/scikit-image/"><h6>scikit-image</h6></a>
+</div>
+<div class="col-md-10">
+Scikit-image is a general purpose image processing library. I added an N-dimensional butterworth filter.
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-2">
+<a href="https://www.elabftw.net/"><h6>eLabFTW</h6></a>
+</div>
+<div class="col-md-10">
+eLabFTW is an electronic lab notebook application. I contributed to the containerization and automated CD workflow to create multi-arch images.
 </div>
 </div>
 
