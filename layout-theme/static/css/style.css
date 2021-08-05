@@ -118,3 +118,11 @@ a {
 .debug_div {
   border: 2px solid black;
 }
+
+table, th, td {
+  border: 1px solid black;
+  width: 50%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
