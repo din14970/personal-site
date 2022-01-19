@@ -8,20 +8,20 @@ Summary: After being active as a researcher in the physical sciences for six yea
 Kids career choices are rarely taken seriously by adults.
 They have an idealized and simplistic picture of the world and can't comprehend all the nuance involved with choosing a career.
 Kids always choose jobs that can be summarized in a simple sentence or explained in a picture, like astronaut, firefighter, teacher, and doctor.
-So we adults smugly tell ourselves, as we simultaneously perform mental gymnastics to rationalize the importance of our gig as business analyst or scrum master.
+At least, so adults like us smugly tell ourselves, as we simultaneously perform mental gymnastics to rationalize the importance and impact of our gig as business analyst or scrum master.
 We tell ourselves that we did, in fact, make all the right decisions to get here.
 Something, something, business value and customer satisfaction, am I right?
 
-After a brief astronaut phase as a very young kid, I turned my full attention to a career as a scientist.
+After very a brief astronaut phase as a very young kid, I turned my full attention to a career as a scientist.
 In my family this was a first.
-My parents both worked in different departments at the corporate office of a large Belgian bank.
-In their family they were both the only ones to attend university.
-There was zero mathematical or scientific aptitude within my family.
+My parents both worked in different departments at the corporate office of a large bank.
+In their family they were both the first and only ones to attend university.
+Still, there was zero mathematical or scientific aptitude within my family.
 
-As a kid I saw my parents slaving away at "shuffling paper" and discussing incomprehensible nonsense.
+As a kid I saw my parents slaving away at "shuffling paper" and discussing incomprehensible nonsense with industry jargon.
 Twenty years later I'm thankful for the sacrifices they made to raise my brother and I, but I admit I still don't fully comprehend what they actually do.
-Even though I never read the book back then, I very much vibed with the sentiment of [Bullshit jobs]().
-I still do to a large extent.
+Even though I'd never read the book, I very much vibed with the sentiment of ["Bullshit Jobs"](https://en.wikipedia.org/wiki/Bullshit_Jobs) by David Graeber.
+To a large extent I still do.
 What do people actually do all day in these glass towers?
 What are they achieving and why are they doing this, when most of them would rather do something else?
 
