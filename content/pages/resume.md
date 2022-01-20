@@ -5,7 +5,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Experience</h2>
+    <a id="experience"><h2>Experience</h2></a>
 
     <div class="container">
 
@@ -128,7 +128,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Education</h2>
+    <a id="education"><h2>Education</h2></a>
 
     <div class="container">
 
@@ -188,7 +188,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Peer-reviewed articles</h2>
+    <a id="articles"><h2>Peer-reviewed articles</h2></a>
     <!--<h4>2022</h4>-->
     <p>
       <strong>N. Cautaerts</strong>, P. Crout, H. W. Ånes, E. Prestat, J. Jeong, G. Dehm, C. H. Liebscher, <em>Free, flexible and fast: orientation mapping using the multi-core and GPU-accelerated template matching capabilities in the python-based open source 4D-STEM analysis toolbox Pyxem</em>, submitted to Ultramicroscopy, arXiv preprint: <a href="https://arxiv.org/pdf/2111.07347.pdf">arXiv:2111.07347</a>.
@@ -232,7 +232,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Theses</h2>
+    <a id="theses"><h2>Theses</h2></a>
     <p>
       <strong>N. Cautaerts</strong>, <em>Nanoscale study of ageing and irradiation induced precipitates in the DIN 1.4970 alloy</em> (Ph.D. Thesis, supervisor: D. Schryvers), University of Antwerp, 2019, <a href="https://repository.uantwerpen.be/docman/irua/83a6dc/14999.pdf">Download link</a>
     </p>
@@ -251,7 +251,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Thesis supervision</h2>
+    <a id="supervision"><h2>Thesis supervision</h2></a>
     <p>
       A. Youssef, <em>Influence of testing conditions and thermomechanical treatments on tensile properties of the MYRRHA cladding steel DIN 1.4970</em>, FH Aachen, 2018, <a href="https://publications.sckcen.be/portal/files/6718646/Influence_of_Testing_Conditions_and_Thermomechanical_Treatments_on_Tensile_Properties_of_The_MYRRHA_Cladding_Steel_DIN_1.4970.pdf">Download link</a>
     </p>
@@ -265,7 +265,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Teaching</h2>
+    <a id="teaching"><h2>Teaching</h2></a>
     <ul>
       <li>Teach basics of TEM in SURMAT, Online, August 2021</li>
       <li>Teach python data visualisation and image processing, Online, April 2021</li>
@@ -282,7 +282,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Research stays/visits</h2>
+    <a id="research-stays"><h2>Research stays</h2></a>
     <div class="container">
 
       <div class="row">
@@ -333,7 +333,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Certifications</h2>
+    <a id="certifications"><h2>Certifications</h2></a>
     <div class="container">
 
       <div class="row">
@@ -354,7 +354,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Conference contributions</h2>
+    <a id="conferences"><h2>Conference contributions</h2></a>
     <h6>Invited talks</h6>
     <ul>
       <li>
@@ -413,7 +413,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Awards</h2>
+    <a id="awards"><h2>Awards</h2></a>
     <ul>
       <li>Laureate European Nuclear Society (ENS), best Ph.D. thesis contest (2020)</li>
       <li>Finalist Belgian Nuclear Society (BNS), Young generation paper contest (2020)</li>
@@ -427,7 +427,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Courses</h2>
+    <a id="courses"><h2>Courses</h2></a>
     <ul>
       <li>Machine learning by Andres Ng (Coursera)</li>
       <li>Harvard CS50 (edX)</li>
@@ -439,7 +439,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Grants and scholarships</h2>
+    <a id="grants"><h2>Grants and scholarships</h2></a>
     <ul>
       <li>Ph.D. scholarship from SCK-CEN on the topic: <em>Investigation of the influence of thermo-mechanical treatments on microstructure and mechanical properties of Ti stabilized 15Cr-15Ni austenitic stainless steel</em>, 2015</li>
       <li><a href="https://nsuf.inl.gov/Page/rte">NSUF-RTE grant</a> on the topic: <em>Low temperature Fe-ion irradiation of 15-15Ti steel in different thermo-mechanical states</em>, 2017, proposal no. 864</li>
@@ -453,7 +453,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Reviewing activities</h2>
+    <a id="reviewing"><h2>Reviewing activities</h2></a>
 
     <h6>Proposals</h6>
     <ul>
@@ -475,7 +475,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Memberships and committees</h2>
+    <a id="memberships"><h2>Memberships and committees</h2></a>
     <ul>
       <li>Belgian Nuclear Society member</li>
       <li>Organizing member of software taskforce at MPIE</li>
@@ -487,7 +487,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Coding projects</h2>
+    <a id="coding"><h2>Coding projects</h2></a>
 
     <h4>Owner</h4>
 
@@ -586,7 +586,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Skills</h2>
+    <a id="skills"><h2>Skills</h2></a>
     <div class="container">
 
       <div class="row">
@@ -669,7 +669,7 @@ Save_as: cv.html
 
 <div class="row mt-3">
   <div class="col-md-12">
-    <h2>Miscellaneous</h2>
+    <a id="misc"><h2>Miscellaneous</h2></a>
     <ul>
       <li><em>Languages</em>: Dutch (mothertongue), English (proficient), French (intermediate), German (basic), Spanish (basic)</li>
       <li><a href="https://conda-forge.org/">conda-forge</a> package contributor and maintainer</li>
