@@ -1,3 +1,2 @@
-pelican==4.5.4
+pelican==4.7.2
 pelican_render_math==1.0.3
-pelican_seo==1.0.3
