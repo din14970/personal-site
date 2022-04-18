@@ -20,7 +20,7 @@ Save_as: cv.html
             I work as a consultant to implement cloud-native big-data solutions at clients.
             <ul>
               <li>
-                For <b>Luminus</b>, a large electricity and energy supplier in Belgium, I support data scientists in the Optimization team by building data transformation pipelines using Python, PySpark and Docker, that query large datasets of weather data and transforms them into clean tables on the AWS S3 datalake. I also assist data scientists in productionizing their models.
+                For <b>Luminus</b>, a large electricity and energy supplier in Belgium, I support data scientists in the Optimization team by building data transformation pipelines using Python, PySpark and Docker, that query large datasets of weather data and transforms them into clean tables on the AWS S3 datalake. I also assist data scientists in productionizing their machine learning models.
               </li>
             </ul>
           </p>
@@ -191,11 +191,11 @@ Save_as: cv.html
     <a id="articles"><h2>Peer-reviewed articles</h2></a>
     <!--<h4>2022</h4>-->
     <p>
-      <strong>N. Cautaerts</strong>, P. Crout, H. W. Ånes, E. Prestat, J. Jeong, G. Dehm, C. H. Liebscher, <em>Free, flexible and fast: orientation mapping using the multi-core and GPU-accelerated template matching capabilities in the python-based open source 4D-STEM analysis toolbox Pyxem</em>, submitted to Ultramicroscopy, arXiv preprint: <a href="https://arxiv.org/pdf/2111.07347.pdf">arXiv:2111.07347</a>.
+      <strong>N. Cautaerts</strong>, P. Crout, H. W. Ånes, E. Prestat, J. Jeong, G. Dehm, C. H. Liebscher, <em>Free, flexible and fast: orientation mapping using the multi-core and GPU-accelerated template matching capabilities in the python-based open source 4D-STEM analysis toolbox Pyxem</em>, Ultramicroscopy 237 (2022) 113517. <a href="https://doi.org/10.1016/j.ultramic.2022.113517">doi.org/10.1016/j.ultramic.2022.113517</a>.
     </p>
     <!--<h4>2021</h4>-->
     <p>
-      J. Jeong, <strong>N. Cautaerts</strong>, G. Dehm, C. H. Liebscher, <em>Automated Crystal Orientation Mapping by Precession Electron Diffraction-Assisted Four-Dimensional Scanning Transmission Electron Microscopy Using a Scintillator-Based CMOS Detector</em>, Microscopy and Microanalysis, 27.5 (2021) 1102-1112. <a href="https://doi.org/10.1017/S1431927621012538">doi.org/10.1017/S1431927621012538</a>. (<a href="https://arxiv.org/pdf/2102.09711">arXiv pre-print available</a>).
+      J. Jeong, <strong>N. Cautaerts</strong>, G. Dehm, C. H. Liebscher, <em>Automated Crystal Orientation Mapping by Precession Electron Diffraction-Assisted Four-Dimensional Scanning Transmission Electron Microscopy Using a Scintillator-Based CMOS Detector</em>, Microscopy and Microanalysis 27.5 (2021) 1102-1112. <a href="https://doi.org/10.1017/S1431927621012538">doi.org/10.1017/S1431927621012538</a>. (<a href="https://arxiv.org/pdf/2102.09711">arXiv pre-print available</a>).
     </p>
     <p>
       <strong>N. Cautaerts</strong>, E. F. Rauch, J. Jeong, G. Dehm, C. H. Liebscher, <em>Investigation of the orientation relationship between nano-sized G-phase precipitates and austenite with scanning nano-beam electron diffraction using a pixelated detector</em>, Scripta Materialia 201 (2021) 113930. <a href="https://doi.org/10.1016/j.scriptamat.2021.113930">doi:10.1016/j.scriptamat.2021.113930</a>.
@@ -466,6 +466,7 @@ Save_as: cv.html
       <li>Acta Crystallographica Section B</li>
       <li>Engineering Computations</li>
       <li>Journal of Microscopy</li>
+      <li>Materials Science and Engineering: A</li>
     </ul>
 
   </div>
@@ -529,7 +530,7 @@ Save_as: cv.html
           <a href="https://pypi.org/project/pyMatchSeries/"><h6>pyMatchSeries</h6></a>
         </div>
         <div class="col-md-10">
-          A python wrapper around the C++ <a href="https://github.com/berkels/match-series">match-series</a> code for joint non-rigid-registration of images. Currently working on re-implementing the algorithm purely in python.
+          A python wrapper around the C++ <a href="https://github.com/berkels/match-series">match-series</a> code for joint non-rigid-registration of images. Currently working on re-implementing the algorithm purely in python with the help of B. Berkels.
         </div>
       </div>
     </div>
@@ -542,7 +543,7 @@ Save_as: cv.html
           <a href="https://pypi.org/project/hyperspy/"><h6>Hyperspy</h6></a>
         </div>
         <div class="col-md-10">
-          Hyperspy is an open source n-dimensional data analysis and visualization toolbox focused on microscopy and spectral data such as EDX and EELS. I fixed some bugs and added features to the Velox EMD reader.
+          Hyperspy is an open source n-dimensional data analysis and visualization toolbox focused on microscopy and spectral data such as EDX and EELS. I fixed some bugs and added features to the Velox EMD reader and added a reader for TVIPS image stream files.
         </div>
       </div>
       <div class="row">
@@ -621,7 +622,7 @@ Save_as: cv.html
           <h6>Data visualisation</h6>
         </div>
         <div class="col-md-10">
-          Matplotlib plotly, gnuplot
+          Matplotlib, plotly, gnuplot
           <br>
         </div>
       </div>
