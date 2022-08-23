@@ -344,6 +344,12 @@ Save_as: cv.html
           Solutions Architect - Associate
           <br>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <h6>Linux Foundation</h6>
+        </div>
         <div class="col-md-10">
           CKA: Certified Kubernetes Administrator
           <br>
