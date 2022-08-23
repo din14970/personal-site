@@ -11,16 +11,16 @@ Save_as: cv.html
 
       <div class="row">
         <div class="col-md-2">
-          <h5>2021 - Present</h5>
+          <h5>2021 - 2022</h5>
         </div>
         <div class="col-md-10">
-          <h5>Data engineer</h5>
+          <h5>Data and ML engineer</h5>
           <h6>Data Minded, Belgium</h6>
           <p>
-            I work as a consultant to implement cloud-native big-data solutions at clients.
+            I worked as a consultant to build data products at clients.
             <ul>
               <li>
-                For <b>Luminus</b>, a large electricity and energy supplier in Belgium, I support data scientists in the Optimization team by building data transformation pipelines using Python, PySpark and Docker, that query large datasets of weather data and transforms them into clean tables on the AWS S3 datalake. I also assist data scientists in productionizing their machine learning models.
+                For <b>Luminus</b>, a large electricity and energy supplier in Belgium, I supported data scientists in the Optimization team by building data transformation pipelines using Python and PySpark. All our pipelines were containerized and ran on Kubernetes clusters managed by AWS. We mainly used the datalake architecture implemented on S3. Everything was orchestrated using Airflow deployed on Kubernetes. My main project included building automated ingestion and cleaning flows for large public weather forecasting datasets from providers like Meteofrance, KNMI and ECMWF. This data was subsequently used by data scientists to predict power output of Luminus' wind assets. I also assist data scientists in productionizing and debugging their machine learning models.
               </li>
             </ul>
           </p>
@@ -344,6 +344,10 @@ Save_as: cv.html
           Solutions Architect - Associate
           <br>
         </div>
+        <div class="col-md-10">
+          CKA: Certified Kubernetes Administrator
+          <br>
+        </div>
       </div>
 
     </div>
@@ -640,7 +644,7 @@ Save_as: cv.html
           <h6>DevOps</h6>
         </div>
         <div class="col-md-10">
-          Docker, Github actions, git, vim, Airflow
+          Docker, Kubernetes, Github actions, git, vim, Airflow
           <br>
         </div>
       </div>
