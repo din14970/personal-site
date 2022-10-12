@@ -6,7 +6,12 @@ Save_as: contact.html
 <div class="col-md-12">
 <h2>Contact details</h2>
 
-Do you want to ask me a question? Do you want to collaborate on a project? Do you have an interesting opportunity? Or do you just want to say hello? You can find me on many platforms, though I am more active on some than others. You can also contact me via e-mail: niels.cautaerts at dataminded dot be and nielscautaerts at hotmail dot com.
+Do you want to ask me a question? 
+Do you want to collaborate on a project? 
+Do you have an interesting opportunity? 
+Or do you just want to say hello? 
+You can find me on many platforms, though I am more active on some than others. 
+You can also contact me via e-mail: niels.cautaerts at vito dot be and nielscautaerts at hotmail dot com.
 
 </div>
 </div>
