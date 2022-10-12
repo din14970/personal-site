@@ -11,6 +11,33 @@ Save_as: cv.html
 
       <div class="row">
         <div class="col-md-2">
+          <h5>2022 - Present</h5>
+        </div>
+        <div class="col-md-10">
+          <h5>Research software developer / data scientist</h5>
+          <h6>VITO, Belgium</h6>
+          <p>
+            As a researcher I contribute to HPC, data science, data infrastructure and data management projects that occur in the various units. Some things I'm working on:
+            <ul>
+              <li>
+                Developing a library for estimating uncertainty and detect outliers in deep learning models for computer vision.
+              </li>
+              <li>
+                Developing GPU based computer vision algorithms to process huge volumes of image stream data.
+              </li>
+              <li>
+                Building a data platform for reproducible science and FAIR data management.
+              </li>
+              <li>
+                Small projects like building web scrapers and migrating Excel databases to more durable solutions.
+              </li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
           <h5>2021 - 2022</h5>
         </div>
         <div class="col-md-10">
@@ -267,6 +294,7 @@ Save_as: cv.html
   <div class="col-md-12">
     <a id="teaching"><h2>Teaching</h2></a>
     <ul>
+      <li>I have a small YouTube channel with tutorial videos, e.g. on how to do <a href="https://youtu.be/9bBsvpg-Xlk">GPU programming with python</a></li>
       <li>Teach basics of TEM in SURMAT, Online, August 2021</li>
       <li>Teach python data visualisation and image processing, Online, April 2021</li>
       <li>Stanford's <a href="https://codeinplace.stanford.edu/">Code in place</a> section leader teaching python programming, Online, April 2021</li>
@@ -623,7 +651,7 @@ Save_as: cv.html
           <h6>Data analysis</h6>
         </div>
         <div class="col-md-10">
-          numpy, scipy, pandas, scikit-learn, scikit-image, TensorFlow, OpenCV
+          numpy, scipy, pandas, scikit-learn, scikit-image, TensorFlow, OpenCV, PyTorch
           <br>
         </div>
       </div>
