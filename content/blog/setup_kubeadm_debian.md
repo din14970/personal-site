@@ -36,14 +36,14 @@ $ sudo nmcli con mod "name-of-connection" \
   ipv4.method "manual"
 ```
 * By default if I closed the laptop lid, the laptop went into suspension mode and I could no longer connect with SSH. I followed [this stackexchange thread](https://unix.stackexchange.com/questions/563729/looking-for-the-settings-that-causes-debian-to-suspend-when-laptop-lid-is-closed).
-* I want the laptop to automatically log in as root on a reboot on tty1. I followed [this stackexchange thread](https://unix.stackexchange.com/questions/401759/automatically-login-on-debian-9-2-1-command-line)
+* I want the laptop to automatically log in as root on a reboot on tty1. I followed [this stackexchange thread](https://unix.stackexchange.com/questions/401759/automatically-login-on-debian-9-2-1-command-line).
 * For the `kubelet` process, it turns out you can not have `swap` memory enabled (of course I only discovered this at a later stage). During the Debian install process this is automatically created. You can run `sudo swapoff -a` and remove the `swap` related lines in `/etc/fstab`, but to make swap disabling truly persistent across reboots I also had to run `sudo systemctl mask "dev-sda3.swap"`.
 * I configured a firewall with `ufw`. A number of ports need to be opened, for which I followed [this guide](https://www.howtoforge.com/how-to-setup-kubernetes-cluster-with-kubeadm-on-debian-11/). This guide also explains how to set up kernel modules `overlay` and `br_netfilter`.
 
 ### Installing a container runtime
 Many container runtimes can be used with K8s.
 Initially I thought I would use docker.
-I just followed (the official docs)[https://docs.docker.com/engine/install/debian/].
+I just followed [the official docs](https://docs.docker.com/engine/install/debian/).
 In the end I decided to use `containerd` instead as container runtime, which also gets installed if you follow the docker installation.
 
 ### Configuring Containerd
@@ -54,7 +54,7 @@ You need to edit some settings in `/etc/containerd/config.toml`.
 The trouble is that by default, installing `containerd` with `apt` does not create this file.
 To create the file run
 
-```bash
+```
 # containerd config default > /etc/containerd/config.toml
 ```
 
@@ -83,7 +83,9 @@ You can view the images with
 $ sudo crictl images
 ```
 
-Then restart containerd
+after you have pulled them. 
+
+When you have made your changes, you should restart containerd
 
 ```bash
 $ sudo systemctl restart containerd
@@ -107,7 +109,7 @@ $ sudo apt-mark hold kubelet kubeadm kubectl
 You can now check whether the `kubelet` exists as a systemd service, however it should not be active since `kubeadm` has not created configuration for it.
 
 ```
-$ sudu systemctl status kubelet
+$ sudo systemctl status kubelet
 ```
 
 ### Bootstrapping the cluster
@@ -128,6 +130,7 @@ If all goes well, you should get a message that the cluster is now initialized.
 If it errors out somewhere, you will likely have the tear down everything with `sudo kubeadm reset`, change some configuration and try again.
 To see more in detail what is going on you can check `sudo kubeadm init --v=5`. 
 Additional debugging strategies:
+
 * Check [this page](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/troubleshooting-kubeadm/) to see if you find your error. 
 * Check the status and logs of the `kubelet` with `sudo systemctl status kubelet` and `sudo journalctl -u kubelet -f`.
 * Check if any of the system components were created as containers and their status with `sudo crictl ps`. You can then check logs of individual containers with `sudo crictl logs <container id>`.
