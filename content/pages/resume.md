@@ -218,11 +218,14 @@ Save_as: cv.html
     <a id="articles"><h2>Peer-reviewed articles</h2></a>
     <!--<h4>2022</h4>-->
     <p>
-      <strong>N. Cautaerts</strong>, P. Crout, H. W. Ånes, E. Prestat, J. Jeong, G. Dehm, C. H. Liebscher, <em>Free, flexible and fast: orientation mapping using the multi-core and GPU-accelerated template matching capabilities in the python-based open source 4D-STEM analysis toolbox Pyxem</em>, Ultramicroscopy 237 (2022) 113517. <a href="https://doi.org/10.1016/j.ultramic.2022.113517">doi.org/10.1016/j.ultramic.2022.113517</a>.
+      H. Gopalan, A. Marshal, M. Hans, D. Primetzhofer, <strong>N. Cautaerts</strong>, B. Breitbach, B. Völker, C. Kirchlechner, J. M. Schneider,  G. Dehm, <em>On the interplay between microstructure, residual stress and fracture toughness of (Hf-Nb-Ta-Zr) C multi-metal carbide hard coatings.</em>, Materials & Design (2022) 111323. <a href="https://doi.org/10.1016/j.matdes.2022.111323">doi:10.1016/j.matdes.2022.111323</a>
+    </p>
+    <p>
+      <strong>N. Cautaerts</strong>, P. Crout, H. W. Ånes, E. Prestat, J. Jeong, G. Dehm, C. H. Liebscher, <em>Free, flexible and fast: orientation mapping using the multi-core and GPU-accelerated template matching capabilities in the python-based open source 4D-STEM analysis toolbox Pyxem</em>, Ultramicroscopy 237 (2022) 113517. <a href="https://doi.org/10.1016/j.ultramic.2022.113517">doi:10.1016/j.ultramic.2022.113517</a>.
     </p>
     <!--<h4>2021</h4>-->
     <p>
-      J. Jeong, <strong>N. Cautaerts</strong>, G. Dehm, C. H. Liebscher, <em>Automated Crystal Orientation Mapping by Precession Electron Diffraction-Assisted Four-Dimensional Scanning Transmission Electron Microscopy Using a Scintillator-Based CMOS Detector</em>, Microscopy and Microanalysis 27.5 (2021) 1102-1112. <a href="https://doi.org/10.1017/S1431927621012538">doi.org/10.1017/S1431927621012538</a>. (<a href="https://arxiv.org/pdf/2102.09711">arXiv pre-print available</a>).
+      J. Jeong, <strong>N. Cautaerts</strong>, G. Dehm, C. H. Liebscher, <em>Automated Crystal Orientation Mapping by Precession Electron Diffraction-Assisted Four-Dimensional Scanning Transmission Electron Microscopy Using a Scintillator-Based CMOS Detector</em>, Microscopy and Microanalysis 27.5 (2021) 1102-1112. <a href="https://doi.org/10.1017/S1431927621012538">doi:10.1017/S1431927621012538</a>. (<a href="https://arxiv.org/pdf/2102.09711">arXiv pre-print available</a>).
     </p>
     <p>
       <strong>N. Cautaerts</strong>, E. F. Rauch, J. Jeong, G. Dehm, C. H. Liebscher, <em>Investigation of the orientation relationship between nano-sized G-phase precipitates and austenite with scanning nano-beam electron diffraction using a pixelated detector</em>, Scripta Materialia 201 (2021) 113930. <a href="https://doi.org/10.1016/j.scriptamat.2021.113930">doi:10.1016/j.scriptamat.2021.113930</a>.
