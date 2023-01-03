@@ -218,6 +218,9 @@ Save_as: cv.html
     <a id="articles"><h2>Peer-reviewed articles</h2></a>
     <!--<h4>2022</h4>-->
     <p>
+      S. Zhang, Z. Xie, P. Keuter, S. Ahmad, L. Abdellaoui, X. Zhou, <strong>N. Cautaerts</strong>, B. Breitbach, S. Aliramaji, S. Korte-Kerzel, M. Hans, J. M Schneider, C. Scheu<em>Atomistic structures of &lt;0001&gt; tilt grain boundaries in a textured Mg thin film</em>, Nanoscale 14.48 (2022) 18192-18199. <a href="https://doi.org/10.1039/D2NR05505H">doi:10.1039/D2NR05505H</a>
+    </p>
+    <p>
       H. Gopalan, A. Marshal, M. Hans, D. Primetzhofer, <strong>N. Cautaerts</strong>, B. Breitbach, B. Völker, C. Kirchlechner, J. M. Schneider,  G. Dehm, <em>On the interplay between microstructure, residual stress and fracture toughness of (Hf-Nb-Ta-Zr) C multi-metal carbide hard coatings.</em>, Materials & Design (2022) 111323. <a href="https://doi.org/10.1016/j.matdes.2022.111323">doi:10.1016/j.matdes.2022.111323</a>
     </p>
     <p>
