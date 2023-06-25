@@ -49,7 +49,7 @@ For the purposes of this post, we are mostly concerned with frequencies of sound
 These determine pitch, which lies at the heart of the different notes.
 Typically frequency is expressed in **Hertz** or Hz, which means how many cycles occur per second.
 If we hear a 5 Hz sound wave, this means that on average five pressure peaks reach the ear every second.
-The piano notes (and all other musical instruments) are calibrated such that the **A** above the central **C** has a fundamental frequency of 440 Hz. 
+The piano notes (and all other musical instruments) are calibrated such that the **A** above the central **C** has a fundamental frequency of 440 Hz.
 This specific value is quite arbitrary, and for a while there was [disagreement over what the "reference frequency" should be](https://globalnews.ca/news/4194106/440-hz-conspiracy-music/).
 What is not random is how the frequencies of all the other notes relate to the reference frequency; it is their ratio that determines whether they sound nice together.
 
@@ -58,7 +58,7 @@ There are other frequencies mixed in with the dominant fundamental frequency whi
 For the sake of simplicity however, we will just talk about the main (fundamental) frequency of musical notes.
 
 ## Harmony: sounds that work well together
-It was Pythagoras that initiated the mathematical study of musical harmony. 
+It was Pythagoras that initiated the mathematical study of musical harmony.
 He discovered that strings that share simple integer length ratios produce sounds that tend to sound harmonious.
 For example, two strings with length ratio 2:1 produce notes that sound identical, except one of them is "higher" and the other "lower".
 Similarly, two strings with length ratio 3:2 produced a nice sound.
@@ -173,7 +173,7 @@ The compromise that was agreed on for just tuning were the following frequency r
 | C     | 1:1             |
 | D     | 9:8             |
 | E     | 5:4             |
-| F     | 4:2             |
+| F     | 4:3             |
 | G     | 3:2             |
 | A     | 5:3             |
 | B     | 15:8            |
@@ -346,7 +346,7 @@ As you can see, 12 and 53 break the general trend, and have a substantially lowe
 Five notes is also not too bad and it is also a denominator in the continued fraction convergents sequence.
 The presence of 5 in the sequence may explain the layout of the black keys on the piano keyboard: if we start from the reference **F#**, then we can pass through all the black keys using fifths before we end up on a white key.
 The frequencies of the black keys could be stretched a bit so that they form the entire note system with only five keys, i.e. we end up back at **F#** after **A#**.
-Indeed there exist historical music systems that only had five notes, for example in ancient Greece. 
+Indeed there exist historical music systems that only had five notes, for example in ancient Greece.
 The black keys on the piano approximate the pentatonic scale; you can often play beautiful music using only these keys.
 The white keys are then added to get to 12 notes.
 In case we want 53 notes, we would need to add an additional "layer" between the white keys.
