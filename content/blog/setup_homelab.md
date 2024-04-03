@@ -87,6 +87,7 @@ The first step is installing an operating system on the Pi.
 The operating system (OS) we will use is [Dietpi](dietpi.com).
 Dietpi is a very slimmed down version of Raspbian, the default OS for the Pi based on Debian Linux.
 We use Dietpi for a number of reasons:
+
 * The OS by itself it requires very little resources, so we can use most of the resources for running the services we care about.
 * It is based on Debian so we have a stable system often used for servers and the full power of the apt package manager at our disposal.
 * It comes with a bunch of useful utilities which makes it easy to install software, keep system packages up to date, do automated backups, …
@@ -116,7 +117,7 @@ Insert the SD card into your Pi, connect it to the Ethernet cable and the power 
 Wait for some time (10–15 min) for the OS to install itself, and you should now be able to SSH to your Pi from another machine in your local network:
 
 ```bash
-$ ssh dietpi@192.168.0.42  # select yes and then enter the pw
+ssh dietpi@192.168.0.42  # select yes and then enter the pw
 ```
 
 If your client machine is a Mac or Linux PC, the SSH client (ssh command) should be available in your terminal.
@@ -174,7 +175,7 @@ A commonly used file system is ext4.
 You can do this with:
 
 ```bash
-$ sudo mkfs.ext4 /dev/sdXY
+sudo mkfs.ext4 /dev/sdXY
 ```
 
 Once you have a file system, you can mount the drives to the file system of your OS.
@@ -270,7 +271,7 @@ With Dietpi, installing useful software is as easy as selecting it in a menu.
 When you are SSHed into the Pi, run
 
 ```bash
-$ sudo dietpi-software
+sudo dietpi-software
 ```
 
 You may have to enter the password you set in the previous section.
@@ -350,7 +351,7 @@ This is how you can do this:
 * If you will send the data over the network, consider using [rsync](https://en.wikipedia.org/wiki/Rsync). With rsync, all you need is SSH access to the remote server. I would recommend something like: 
 
 ```bash
-$ rsync -avhP <source directory> dietpi@192.168.0.42:<remote directory>
+rsync -avhP <source directory> dietpi@192.168.0.42:<remote directory>
 ```
 
 * If your data already exists on an external drive, it will probably be faster to attach the drive directly to the Pi's USB 3.0 ports and copy it over. Then mount the drive using `sudo mount /dev/<partition name> <mount point>`. Find the name of the partition using the `lsblk` command.
@@ -359,13 +360,13 @@ $ rsync -avhP <source directory> dietpi@192.168.0.42:<remote directory>
 * Files must have the right owner and access rights for Nextcloud to work with it. Change this recursively to
 
 ```bash
-$ chown -R www-data:www-data <directory>
+chown -R www-data:www-data <directory>
 ```
 
 * For Nextcloud to register those files, it needs to register the file metadata in the database. This does not happen automatically when you simply copy files into the directory. To make Nextcloud aware of the files, you need to use the Nextcloud CLI, more specifically the following command (this may take multiple minutes to even hours depending on how many files you copied).
 
 ```bash
-$ ncc files:scan --all
+ncc files:scan --all
 ```
 
 That's it, now your files and their metadata should be properly migrated to Nextcloud!
@@ -472,7 +473,7 @@ You can now use immich-go as follows from a terminal:
 
 ```bash
 # assuming you are currently in the directory containing immich-go
-$ ./immich-go -server="http://192.168.0.42:2283" \
+./immich-go -server="http://192.168.0.42:2283" \
 -key="<your API key>" \
 -skip-verify-ssl \
 upload \
@@ -587,7 +588,7 @@ Select create a new network from a QR code.
 In a shell session connected to your Pi, create the QR code with
 
 ```bash
-# grep -v '^#' /etc/wireguard/wg0-client.conf | qrencode -t ansiutf8
+grep -v '^#' /etc/wireguard/wg0-client.conf | qrencode -t ansiutf8
 ```
 
 Turn on the connection, then check in a browser whether you can access your services at 192.168.0.42.
@@ -681,7 +682,7 @@ Configuring Nginx can be a bit of a pain, but some services tell you how to conf
 For example, [here you will find the instructions for Gitea](https://docs.gitea.com/administration/reverse-proxies#nginx).
 In the file `/etc/nginx/sites-enabled/default` you would add a block like this:
 
-```
+```php
 server {
     server_name gitea.rpi4.home.local;
 
@@ -701,7 +702,7 @@ You have to do a similar thing for each of the services which you want to connec
 For services (e.g. nextcloud, pihole) that all run on port 80 and are accessed via a specific subpath, the configuration may look a bit different.
 I have something like this:
 
-```
+```php
 server {
     listen 80;
     server_name nextcloud.rpi4.home.local;
@@ -717,7 +718,7 @@ To enable your new configuration, you also have to restart nginx:
 
 
 ```bash
-$ sudo systemctl restart nginx
+sudo systemctl restart nginx
 ```
 
 It's possible that you mess up your nginx configuration and that the service fails to start.
@@ -750,14 +751,14 @@ I may dedicate a small separate article for this process, but there are lots of 
 Once I have a certificate + key combination (rpi4.home.local.crt and rpi4.home.local.key), I copy them to `/etc/ssl/certs` and `/etc/ssl/private` respectively.
 I then create a file `/etc/nginx/snippets/self-signed.conf` containing the lines:
 
-```
+```php
 ssl_certificate /etc/ssl/certs/rpi4.home.local.crt;
 ssl_certificate_key /etc/ssl/private/rpi4.home.local.key;
 ```
 
 I then enable HTTPS for my services by adding some lines to the server blocks in `/etc/nginx/sites-enabled/default`:
 
-```
+```php
 server {
     ...
 
@@ -769,7 +770,7 @@ server {
 
 In the same file, I also add a block that looks like this:
 
-```
+```php
 server {
     if ($host = <service>.rpi4.home.local) {
         return 301 https://$host$request_uri;
@@ -821,7 +822,7 @@ Follow the instructions in [the documentation](https://rclone.org/s3/#configurat
 Then it's as simple as running a single command:
 
 ```bash
-$ rclone sync --fast_list --progress --size_only \
+rclone sync --fast_list --progress --size_only \
 <input_dir> <remote name>:<bucket name>/<output prefix>
 ```
 
@@ -889,6 +890,7 @@ If you sit on the couch and watch Netflix for two days, you also wasted the oppo
 #### Why would you want to do this?
 Saving money is not a very good argument.
 The main reasons would be:
+
 * You have a bunch of data scattered across multiple external hard drives, devices and cloud accounts. You want to centralize this data, make it accessible, and bring it under your own control.
 * You like to tinker with technology, build things, and figure out how things work.
 * You see this as a learning opportunity. Personally I feel like I learned quite a bit about networking, Linux and web, simply by playing with these tools.
