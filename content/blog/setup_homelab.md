@@ -65,7 +65,7 @@ We will also set up secure access to your services from outside your house using
 You could then also create a dashboard with links to all your services:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im1.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im1.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 ### Who is this article for
@@ -126,7 +126,7 @@ If you use Windows it may be available in Powershell, WSL, or you can try [PuTTy
 If all goes well, you should be greeted by a screen that looks like this:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im2.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im2.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Congrats, your Pi is now a functional mini server!
@@ -185,7 +185,7 @@ Then, mount the drives with mount, e.g. `mount /dev/sda1 /mnt/external_1`.
 Now, `lsblk` should look something like this:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im3.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im3.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Then run `dietpi-drive_manager`, which should detect your drives and mountpoints.
@@ -193,13 +193,13 @@ It will also automatically regenerate your `/etc/fstab` file based on your curre
 This file is read at boot time and automatically mounts volumes.
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im4.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im4.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 If you select one of the drives it should look like this:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im5.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im5.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 One one of the drives, you can then select to migrate user data to this drive by selecting the option.
@@ -208,7 +208,7 @@ It will copy over all data in `/mnt/dietpi_userdata` to this drive, then replace
 You can check this in the `/mnt` directory.
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im6.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im6.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 In the `dietpi-drive_manager` menu you can also find an option to transfer the entire root file system (the `/` partition) to an external drive.
@@ -222,7 +222,7 @@ There are other convenient utilities in `dietpi-drive_manager`, like reformattin
 To set up automatic back-ups of the system, we will use the `dietpi-backup` command:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im7.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im7.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Here you can set a location for the backups (I store them on the external drive), turn on daily backup via cron, and set a number of backups you would like to keep.
@@ -235,7 +235,7 @@ If you want to manually create a backup, just select `Backup` in this menu.
 Note that `dietpi-backup` will not actually create backups of the user data in `/mnt`, only the system! To create backups of the user data, we can use an additional utility: `dietpi-sync`:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im8.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im8.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Set the source and target location, and turn on daily sync.
@@ -278,14 +278,14 @@ You may have to enter the password you set in the previous section.
 This brings up the following menu:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im9.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im9.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Use the arrow keys to navigate and Enter to select.
 Go to Browse Software, which brings up the list of all easily installable software:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im10.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im10.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Different titles are organized by category.
@@ -312,14 +312,14 @@ Some of the following sections will assume you are also using Nginx.
 After you have installed Nextcloud, you can access the web interface by opening your browser to `192.168.0.42/nextcloud`. 
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im11.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im11.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 You can log in as admin using the username `admin` and the password you set in the previous section.
 This should bring you to an interface that should look quite familiar:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im12.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im12.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 It's possible you end up first on a "dashboard" instead and you have to click through to see your files.
@@ -381,19 +381,19 @@ Since the exact instructions are prone to change, I will not repeat them here, b
 Once your containers are running, you should be able to access the web interface at `http://192.168.0.42:2283`. You see all your pictures and videos on a timeline:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im13.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im13.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 You can also explore them on a map:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im14.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im14.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Definitely one of the coolest features is the support for semantic search (though it can be a bit slow):
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im15.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im15.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 There is also the option to run the images through a facial recognition model and identify people in the photos. 
@@ -401,7 +401,7 @@ There is also the option to run the images through a facial recognition model an
 You can access all these options in Administration > Jobs.
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im16.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im16.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 For all the capabilities of Immich and for resolving issues when things go wrong, have a look at the [official documentation](https://immich.app/docs/overview/introduction/).
@@ -409,7 +409,7 @@ For all the capabilities of Immich and for resolving issues when things go wrong
 Immich also has a very sleek app that makes syncing new photos and viewing current photos from your phone a breeze:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im17.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im17.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Just search for it in your app store and connect to it by providing your IP:port combination and your login details. 
@@ -417,7 +417,7 @@ Just search for it in your app store and connect to it by providing your IP:port
 To enable automated syncing of photos and video, tap the little cloud upload icon at the top:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im18.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im18.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Select which albums on your phone you want to sync.
@@ -427,7 +427,7 @@ At the bottom of this page you can start a manual sync.
 To enable automated sync tap the gear at the top:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im19.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im19.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 I enabled background syncing, otherwise syncing will only happen when you open the app.
@@ -438,7 +438,7 @@ The main reason to use Immich is as a replacement for Google Photos.
 To migrate your data out of Google Photos, go to settings and select export your data:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im20.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im20.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 When asked what type of archive you want to use, select `*.zip`.
@@ -446,7 +446,7 @@ Then split up your download into a reasonable size.
 If your internet is stable, I suggest selecting the largest file size, as you must click on a link to download each part separately.
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im21.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im21.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 After some time, you can go to Google takeout where you will find links to download all your data.
@@ -463,7 +463,7 @@ Click on your profile picture circle in the top right and go to "Account Setting
 There you will find a section "API keys":
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im22.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im22.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Create a new API key and store it in a safe place.
@@ -492,7 +492,7 @@ Once you have it installed, you have your very own git remote at 192.168.0.42:30
 After you log in (see dietpi docs), you will see an interface that is very recognizable and intuitive, at least if you are a developer and have used GitHub:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im23.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im23.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 To use it as a remote in your projects, add your public SSH key in "Settings".
@@ -654,13 +654,13 @@ Anyway, we want to use pihole for local DNS.
 Once you have pihole, go to 192.168.0.42/admin and log in with the dietpi password. This brings you to a page that looks something like this:
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im24.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im24.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 You can now click through to Local DNS > DNS records. 
 
 <div style="text-align: center;">
-<img src="{static}/images/HomelabArticle/im25.png" alt="" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+<img src="{static}/images/HomelabArticle/im25.png" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
 </div>
 
 Now you can link a domain to the IP adress of your Pi.
