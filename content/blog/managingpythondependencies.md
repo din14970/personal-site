@@ -89,12 +89,14 @@ Reproducibility means we can follow a set of steps and always get exactly the sa
 Reproducibility makes the behavior of the code **deterministic**: everyone that interacts with the code sees the same behavior and finds the same bugs.
 As soon as a single step in the chain of instructions is not reproducible, the behavior of code becomes non-deterministic.
 
-There are three stages in which reproducibility  is important:
+There are three stages in which reproducibility is important:
+
 1. **The development stage:** while you develop, you want to ensure you can always easily re-create the environment needed for your code to run. This is important even if you develop by yourself. If you accidentally break your environment, you always have the ability to start over. It is critical when you develop as part of a team. Ideally everyone develops in identical environments. The development stage may require additional development dependencies that are not required at run time, for example linting and  formatting tools.
 2. **The build stage:** when you want to publish your code or deploy your application, you may have to perform some additional steps. If you are publishing a pure Python library, maybe that is simply putting your code in a zip-file or tarball and uploading it somewhere. If you have written extensions in other languages, you may need to compile them. If you are deploying a web service, you may have to build a Docker container.  The end result of a build stage is one or more artifacts. Reproducibility means that you can always produce identical artifacts by re-running the build i.e. you guarantee that there is a one-to-one correspondence between your code and whatever it is you publish. The build stage may also require additional dependencies, for example a compiler, a container build tool-chain, or even just a zip-file creation tool.
 3. **The deployment stage / run time:** when your code or application is running out there in the wild, you want to guarantee predictable behavior. You don't want the behavior of your code to change because you were not carefully tracking your dependencies. Ideally, your code behaves the same as during the development stage.
 
 Good dependency management means that: 
+
 * **all** dependencies for the development, build and deployment stages are **explicitly declared and tracked together with the code in version control.** This is simply reflects the fact that **your application = your code + all your dependencies.**
 * there is an **automated process** that is able to turn these declared dependencies into a working environment. 
 * it is possible to safely **evolve and update** your environment when new versions of dependencies become available.
@@ -108,8 +110,9 @@ In the rest of this article, we will mainly deal with software dependencies up t
 ## What is the best way to manage dependencies?
 
 There are two prerequisites before we can even begin to talk about managing dependencies:
-* Version control
-* Environment isolation
+
+* **Version control**
+* **Environment isolation**
 
 You should be tracking your code with a version control system.
 There are no exceptions.
@@ -242,9 +245,10 @@ We must deal with them.
 What makes this extra frustrating is that the process is made unnecessarily difficult.
 
 ## Why is managing dependencies in Python hard?
-### Default tooling does not encourage best practices
+#### Default tooling does not encourage best practices
 For many modern programming languages, the associated tooling has the lock-file based dependency management mechanism baked in.
 For a great example, consider [Rust's Cargo](https://github.com/rust-lang/cargo). 
+
 Not so with Python.
 
 The default package manager for Python is pip.
@@ -260,7 +264,7 @@ You can mitigate this danger by running `pip install --user package`, which inst
 Unfortunately virtual environments are not often taught to beginning Python programmers as it's often deemed an advanced topic.
 Additionally, default virtual environments come with limitations, which we will discuss.
 
-### The system software and project package problem
+#### The system software and project package problem
 Because Python is mostly a "glue" language, you often end up in a situation where you need non-Python dependencies in your environment.
 Unfortunately, those are usually not installable through pip, so you need additional tooling to bootstrap your environment. 
 
@@ -270,7 +274,7 @@ As a consequence, all kinds of tooling has been developed specifically to manage
 
 The more tools you need to declare and create an environment, the more difficult it is to automate the setup and guarantee reproducibility.
 
-### Ecosystem fragmentation
+#### Ecosystem fragmentation
 Because Python's default tooling is somewhat lackluster, a plethora of third party tools have been developed to patch the gaps.
 Each of these tools are developed with particular use cases in mind, and none are appropriate to deal with all possible project cases nor the entire development lifecycle. 
 
@@ -281,7 +285,7 @@ These tools can be made to work together, but this can cause issues down the lin
 The end result is that you have to make an informed decision on which of the many tools you need for your specific project.
 In this process, you must deal with the noise of people on the internet who vouch for whatever tool they like as the end-all-be-all tool.
 
-### Third party tooling is often written in Python
+#### Third party tooling is often written in Python
 The ultimate irony is that many of the Python developer tools are themselves written in Python.
 That means, to install them, you first need to have a Python installation and an environment.
 If you install these tools inside the same environment as your project, the dependencies of your tools can start to conflict with the dependencies you need for your application.
@@ -298,7 +302,7 @@ I'm not an expert user for ALL these tools, so if I write something about your f
 This section is about getting informed and making up your own mind.
 In the next section, I'll give you my personal advice on what tools I would use in different situations.
 
-### pip
+#### pip
 Pip is the default package manager that comes with Python.
 This is a big advantage: you don't need to install anything else.
 By default it installs packages from the [Pypi.org](https://pypi.org) repository where a huge number of packages are available (500K+).
@@ -332,20 +336,20 @@ However, such a manual process is error prone and most people prefer to use a de
 
 So, to summarize pip:
 
-#### Capabilities:
+##### Capabilities:
 * Install Python packages
 
-#### Advantages:
+##### Advantages:
 * Included in Python since Python 3.4
 * Fast installs since the wheel packaging format introduction in 2013
 * Since pip 20.3 decent and fast dependency resolution algorithm
 
-#### Disadvantages:
+##### Disadvantages:
 * It's a Python tool
 * No installation of non-Python packages
 * No lock files
 
-### venv
+#### venv
 One could say that venv is the pip equivalent for virtual environments.
 It's a built-in tool that serves to create virtual environments.
 Inside the virtual environment you can install packages with pip.
@@ -363,18 +367,18 @@ Venv also does not modify the shared library paths, and does not deal with non p
 
 So, to summarize venv:
 
-#### Capabilities:
+##### Capabilities:
 * Manage virtual environments for Python packages
 
-#### Advantages:
+##### Advantages:
 * Included in Python since Python 3.3
 
-#### Disadvantages:
+##### Disadvantages:
 * It's a Python tool
 * All environments must use the same Python interpreter
 * No installation of non-Python packages
 
-### virtualenv
+#### virtualenv
 Virtualenv is the O.G. venv.
 Before venv became part of Python, virtualenv could be used to create virtual environments.
 It must be installed through pip.
@@ -383,17 +387,17 @@ So you might have a Python 3.9 install with virtualenv.
 If you also have Python 3.12 installed, you can use this virtualenv to create a virtual environment that uses Python 3.12.
 This is not possible with venv.
 
-#### Capabilities:
+##### Capabilities:
 * Manage virtual environments for Python packages
 
-#### Advantages:
+##### Advantages:
 * Can point to a different Python interpreter
 
-#### Disadvantages:
+##### Disadvantages:
 * All the same ones as venv
 * It's a third party package that must be pip installed
 
-### pip-tools
+#### pip-tools
 [pip-tools](https://pypi.org/project/virtualenv/) is a light-weight tool that introduces the lock file mechanism to Python.
 Instead of directly writing your `requirements.txt`, you write a `requirements.in` file, which is your definition file.
 You then use the `pip-compile` command to generate the `requirements.txt` file, which functions as the lock file.
@@ -412,13 +416,13 @@ It might not be compatible with the Python version you need or its dependencies 
 A small inconvenience is that you have to manually maintain the `requirements.in` files.
 More advanced tools provide users with CLI utilities to facilitate this process.
 
-#### Capabilities:
+##### Capabilities:
 * Manage lock files
 
-#### Advantages:
+##### Advantages:
 * Light weight, simple, interoperable with basic pip/venv tooling
 
-#### Disadvantages:
+##### Disadvantages:
 * It's a Python tool
 * Only able to deal with packages that can be installed with pip
 * Managing the definition files is a manual process
@@ -435,22 +439,22 @@ Again, it's a third party tool written in Python with all the associated drawbac
 Another minor drawback is that the tool only supports normal dependencies and "dev" dependencies, so it's not possible to define environments in a more granular way.
 As it just wraps pip and virtualenv, all the same limitations are inherited.
 
-#### Capabilities:
+##### Capabilities:
 * Install packages
 * Manage virtual environments
 * Manage definition files
 * Manage lock files
 
-#### Advantages:
+##### Advantages:
 * Light weight, simple, wraps basic pip/venv tooling
 
-#### Disadvantages:
+##### Disadvantages:
 * It's a Python tool
 * Has its own format for definition and lock files
 * Only able to deal with packages that can be installed with pip
 * Only able to distinguish between dev and non-dev dependencies
 
-### Poetry
+#### Poetry
 [Poetry](https://python-poetry.org/) is the first tool on our list so far that aims to capture the entire development flow for a Python project, from project bootstrapping, virtual environments, to dependency management, to even building and publishing packages.
 Poetry is often praised in the blogosphere as the final evolution in Python tooling.
 Unfortunately, it also has its drawbacks, especially when you deal with more complex packages.
@@ -488,7 +492,7 @@ This means it can become extremely problematic to install directly inside your d
 In summary, Poetry is great for simple pure Python projects that only require pip-installable dependencies.
 The fact that it is an all in one tool is simultaneously its greatest benefit as its greatest drawback.
 
-#### Capabilities:
+##### Capabilities:
 * Install packages
 * Manage virtual environments
 * Manage definition files
@@ -496,12 +500,12 @@ The fact that it is an all in one tool is simultaneously its greatest benefit as
 * Build packages
 * Publish packages
 
-#### Advantages:
+##### Advantages:
 * All-in-one opinionated tool for the entire development lifecycle of a Python project
 * Convenient CLI
 * Dependency grouping
 
-#### Disadvantages:
+##### Disadvantages:
 * It's a Python tool
 * More heavy tool, more dependencies
 * Less interoperable with other tooling, no support for other build backends
@@ -510,7 +514,7 @@ The fact that it is an all in one tool is simultaneously its greatest benefit as
 * Only able to deal with packages that can be installed with pip
 * Does not support complex package builds
 
-### pyenv
+#### pyenv
 Until now, all of our tooling assumed Python was already installed on the system.
 All these tools used the virtual environment as isolation level.
 The virtual environment includes pip- or poetry-installed python packages and a symlink to a Python interpreter.
@@ -541,19 +545,19 @@ It can not be installed on Windows.
 There is a separate project called [pyenv-win](https://github.com/pyenv-win/pyenv-win) which aims to port pyenv to the OS.
 Installing all the relevant dependencies on Windows, like a C compiler, can be quite a nightmare.
 
-#### Capabilities:
+##### Capabilities:
 * Install and manage different Python versions
 
-#### Advantages:
+##### Advantages:
 * Pure shell scripts, no Python dependency
 * Follows Unix philosophy: does one thing well
 
-#### Disadvantages:
+##### Disadvantages:
 * Installing a new Python version requires downloading and compiling the source code
 * Can require a bit of set-up the first time to get it to work. Quite a few build dependencies must be installed.
 * No Windows support.
 
-### pipx
+#### pipx
 Most of the tools we have discussed previously suffered from being written in Python themselves.
 In order to install them you need a Python installation first.
 Then where do you install the tools? 
@@ -578,17 +582,17 @@ The virtual environments that it provisions links to a Python version, which by 
 Fortunately this can be overridden using the `--python` flag.
 `pyenv` should be used in tandem to install the different Python interpreters.
 
-#### Capabilities:
+##### Capabilities:
 * Install pip packages as executables in isolated virtual environments
 
-#### Advantages:
+##### Advantages:
 * Better than pip installing a tool directly at the user level → isolated dependencies and can use different Python interpreters
 
-#### Disadvantages:
+##### Disadvantages:
 * It is a tool written in Python
 * No installing of multiple versions of the same tool, so the tool version must be shared among all projects
 
-### uv
+#### uv
 [uv](https://docs.astral.sh/uv/) is relatively new tooling, developed by the same people who created [ruff](https://docs.astral.sh/ruff/), that aims to be the all-in-one python project and package manager.
 As it says in the README:
 
@@ -640,7 +644,7 @@ There is only one `pyproject.toml` and one lock file; all dependencies need to b
 Secondly, while it's already a great step forward to be able to manage both Python interpreters and pip packages with one tool, this doesn't cut it for some projects.
 Of course this is a limitation not only of uv, but also all the previously mentioned tooling.
 
-#### Capabilities:
+##### Capabilities:
 * Install packages
 * Install pip packages as executables in isolated environments ("tools")
 * Manage Python versions
@@ -650,7 +654,7 @@ Of course this is a limitation not only of uv, but also all the previously menti
 * Build packages (provided there is a build backend)
 * Publish packages
 
-#### Advantages:
+##### Advantages:
 * Written in Rust: *blazingly fast™*, single small binary, no external dependencies
 * Multi-platform support (most CPU architectures + all major OS's: Linux, MacOS, Windows)
 * All-in-one opinionated tool for the entire development lifecycle of a Python project
@@ -661,11 +665,11 @@ Of course this is a limitation not only of uv, but also all the previously menti
 * Can select any build back-end for complex builds
 * Arbitrary dependency grouping
 
-#### Disadvantages:
+##### Disadvantages:
 * No support for maintaining multiple mutually incompatible environments
 * Only able to deal with packages that can be installed with pip (and Python interpreters)
 
-### Conda
+#### Conda
 With [Conda](https://github.com/conda/conda), we come to the bifurcation in the Python ecosystem.
 The "main" Python ecosystem centers around pip-installable packages from pypi.org.
 All the previously mentioned tooling orbited in this system. 
@@ -734,12 +738,12 @@ Some other noteworthy design differences between the Conda and pypi ecosystems:
 * Conda environments are typically "global" and designed to be shared among multiple projects. You can "activate" them in your shell from any location on your system. This often leads to situations where Conda environments are even shared among multiple users. Normal virtual environments typically exist at the project level, and should only be activated when you are in the project directory.
 * pypi.org has a single namespace for packages. Once a name is taken, you can no longer use that name to publish a package. Anaconda.org is split into different "channels" so everyone can publish their own version of numpy on their own channel. Mixing and matching packages from different channels is usually a bad idea as dependencies may not be compatible. The conda-forge channel is a community maintained channel that aims to make most software available using a consistent set of build tools. A few years ago, I made a long video on how you can contribute packages to conda-forge, you can check it out [here](https://youtu.be/8s5aj3sjuVE?si=d3xdO7O9WXejToZ3).
 
-#### Capabilities:
+##### Capabilities:
 * Install any type of software and libraries at the user level
 * Manage Python versions
 * Manage conda environments
 
-#### Advantages:
+##### Advantages:
 * Multi-platform support
 * Global package cache
 * Packages are distributed as compiled binaries
@@ -747,7 +751,7 @@ Some other noteworthy design differences between the Conda and pypi ecosystems:
 * Can also use pip inside Conda environments
 * Option for global and shared environments
 
-#### Disadvantages:
+##### Disadvantages:
 * Slow, written in Python
 * Serial downloads of packages
 * Somewhat intrusive installation process (modifies shell config)
@@ -755,7 +759,7 @@ Some other noteworthy design differences between the Conda and pypi ecosystems:
 * No lock file
 * Building and distributing packages for Conda is painful (but this is also the case for wheels with extension modules)
 
-### Mamba
+#### Mamba
 [Mamba](https://github.com/mamba-org/mamba) is a strictly better Conda.
 It's a tool that aims to be a near drop-in replacement for Conda, but solve its biggest pain points: slow dependency resolution and parallel downloads.
 To speed up dependency resolution, it is implemented in C++ and uses a different algorithm. 
@@ -764,17 +768,17 @@ The way to install Mamba used to be dodgy and has evolved significantly since it
 It used to be you first needed Conda, then you could install mamba into an environment with Conda from the conda-forge channel.
 The recommended approach is now to entirely sidestep Conda and install [miniforge](https://github.com/conda-forge/miniforge), or alternatively use [micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html).
 
-#### Capabilities:
+##### Capabilities:
 * Same as Conda
 
-#### Advantages:
+##### Advantages:
 * Fast (dependency resolution + parallel downloads)
 * Micromamba is distributed as single statically linked executable
 
-#### Disadvantages:
+##### Disadvantages:
 * Same as Conda except it is fast
 
-### conda-lock
+#### conda-lock
 [conda-lock](https://github.com/conda/conda-lock) is the pip-tools of the Conda ecosystem.
 It introduces the much needed lock file mechanism to Conda environments.
 It can use both the Conda and Mamba resolvers to generate the lock file.
@@ -788,19 +792,19 @@ Luckily it is pip-installable, so you could use pipx or uv to install it as a st
 A second minor downside: maintenance of the definition file is manual.
 There are no CLI facilities to manage your `environment.yml` file.
 
-#### Capabilities:
+##### Capabilities:
 * Manage lock files
 
-#### Advantages:
+##### Advantages:
 * Simple, interoperable with Conda/Mamba
 * Can handle multiple mutually exclusive environments
 * Can also handle pip-installable packages in environment.yml
 
-#### Disadvantages:
+##### Disadvantages:
 * It's a Python tool
 * Managing the definition files is a manual process
 
-### Pixi
+#### Pixi
 [Pixi](https://pixi.sh/latest/) can be regarded as the uv of the Conda ecosystem.
 It's written in Rust and is distributed as a statically linked binary executable.
 Because the Conda ecosystem is in principle language agnostic, Pixi can even be used to manage dependencies for C++ projects, as long as dependencies are available on Anaconda.org.
@@ -825,7 +829,7 @@ Instead of being able to install Python packages as tools or run them as scripts
 Unfortunately, Pixi does not help you build packages; it would be cool if Pixi could somehow facilitated building packages for conda-forge.
 If you are building a Python package, you can rely on typical build back-ends like setuptools or [hatchling](https://github.com/pypa/hatch).
 
-#### Capabilities:
+##### Capabilities:
 * Install packages
 * Manage Python versions
 * Manage (multiple) virtual environments
@@ -833,7 +837,7 @@ If you are building a Python package, you can rely on typical build back-ends li
 * Manage lock files
 * Makefile-like project automation with "tasks"
 
-#### Advantages:
+##### Advantages:
 * Written in Rust: *blazingly fast™*, single binary, no external dependencies
 * Multi-platform support (most CPU architectures + all major OS's: Linux, MacOS, Windows)
 * Convenient CLI
@@ -842,7 +846,7 @@ If you are building a Python package, you can rely on typical build back-ends li
 * Can use `pyproject.toml` but also `pixi.toml` to configure Pixi and define dependencies
 * Can select any build back-end
 
-#### Disadvantages:
+##### Disadvantages:
 * Limited compatibility with other tooling, though import and export of `environment.yml` is supported
 * No global environments which deviates from Conda's philosophy
 
@@ -868,7 +872,7 @@ If it is not, it can report to the user which older versions are compatible, or 
 ## Tooling beyond the Python ecosystem
 We've talked about Python specific tooling for managing a project, but here I want to mention some additional tooling that is language agnostic and can be employed within a Python project.
 
-### Containers (e.g. Docker)
+#### Containers (e.g. Docker)
 At my previous place of employment, Conda was a dirty word.
 Instead, the preferred tooling for managing system dependencies and isolating environments were containers.
 Inside the container, basic Python tooling like pip, venv and pip-tools were used, although some teams also used Poetry.
@@ -895,17 +899,17 @@ Maybe a matter of personal taste.
 While containers are fully reproducible at runtime, building them is often not reproducible.
 The build steps are imperative commands and often include `apt install` steps; this installs "system dependencies" with versions that depend on when the container is built.
 
-#### Capabilities:
+##### Capabilities:
 * Run or develop software in isolation from the host. A lightweight VM.
 
-#### Advantages:
+##### Advantages:
 * Fully self-contained
 * Fully reproducible at runtime
 * Standardized
 * High industry adoption and large amount of available tooling
 * No external dependencies except for a container runtime
 
-#### Disadvantages:
+##### Disadvantages:
 * Building containers can be a pain
 * You may need root access to the host to build and/or run containers
 * Selecting the right base image for your project can get you stuck between a rock and a hard place
@@ -915,7 +919,7 @@ The build steps are imperative commands and often include `apt install` steps; t
 * Making containers interact with things outside the container is a pain
 * It is very hard to make container builds reproducible
 
-### Nix
+#### Nix
 As promised, I also briefly touch on [Nix](https://nixos.org).
 Nix can be seen as a somewhat exotic alternative to all other tooling. 
 It's hard to describe in only a few paragraphs what Nix is.
@@ -955,17 +959,17 @@ Practically, you can use Nix in multiple ways to [manage a Python project](https
 If you've got an existing Python project that uses poetry or Conda, you can give [conda-shell](https://www.jaakkoluttinen.fi/blog/conda-on-nixos/) or [poetry2nix](https://github.com/nix-community/poetry2nix) a try.
 At this moment I would not advise Nix to the average Python developer, but it is certainly something to keep an eye on.
 
-#### Capabilities:
+##### Capabilities:
 * Create fully isolated and reproducible environments with any software
 * Create fully reproducible builds of artifacts
 
-#### Advantages:
+##### Advantages:
 * Laser focus on reproducibility of built artifacts
 * Declarative approach to building packages and environments
 * Lock-file mechanism for any project when using flakes
 * Much more enjoyable dev experience for reproducible environments than dev containers
 
-#### Disadvantages:
+##### Disadvantages:
 * An ecosystem on its own, very poor interoperability
 * Small community, poor documentation
 * Arcane domain specific functional language to write configuration
@@ -983,7 +987,7 @@ More specifically, it depends on:
 
 Based on these considerations, this would be my advice in the following scenarios, as of the time of writing (November 2024):
 
-### Admin on system, only require Python dependencies
+#### Admin on system, only require Python dependencies
 You can do anything on your system.
 You can install packages at the system level with homebrew, apt, … and you can run and build Docker containers.
 You are building a web app, an API, a basic data science project, a data pipeline.
@@ -998,7 +1002,7 @@ In the 5% case, if you have the very specific requirement of being able to maint
 You can develop directly on your system using a virtual environment, or if you prefer a higher level of isolation leverage a dev container.
 Your deployment target will likely be a container.
 
-### Non admin on system, only require Python dependencies
+#### Non admin on system, only require Python dependencies
 You are trying to build the same type of project but in a more constrained environment.
 In this scenario, **I would recommend using uv or Pixi**.
 Both uv and Pixi can be downloaded as a binary, are available for most platforms, and don't require admin/root privileges to run them.
@@ -1018,7 +1022,7 @@ Again, if you need to maintain **mutually incompatible environments**, you may i
 If you do not wish to use the conda ecosystem, you can also explore uv + dev containers.
 This of course requires that you can build and run containers on your system.
 
-### Admin on system, require complex dependencies
+#### Admin on system, require complex dependencies
 You can do anything on your system.
 You are building an application that requires niche dependencies that can not be pip-installed.
 You are working in scientific research, deep learning and/or are using GPUs and require the CUDA Toolkit.
@@ -1029,7 +1033,7 @@ My personal preference would be to use Pixi, as I then don't need to deal with b
 It's very likely all dependencies are available on conda-forge.
 If packages are not available on conda-forge and if I would have to compile them from source, only then would I favor dev containers.
 
-### Non admin on system, require complex dependencies
+#### Non admin on system, require complex dependencies
 In this case, I would **highly recommend Pixi** for all the aforementioned reasons.
 The conda ecosystem allows you to install everything you would need without needing priviledged access to the system.
 
