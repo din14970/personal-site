@@ -614,7 +614,7 @@ Just like Poetry, uv handles the entire development flow: installing of packages
 It does dependency management correctly, with dependency definitions in the `pyproject.toml` and a lock file in `uv.lock`.
 But it does many things better.
 uv follows Python standards (PEP 508 and PEP 621) for defining dependencies, while Poetry does not.
-uv allows you to choose amy package build back-end; Poetry does not.
+uv allows you to choose any package build back-end; Poetry does not.
 uv maintains a global package cache which is useful when dependencies are duplicated across projects and environments.
 
 In addition, Poetry does not manage the Python version in your environment.
@@ -735,6 +735,7 @@ Conda ships with a much more robust algorithm than pip, a very important point i
 However, Conda is implemented in Python so it is excruciatingly slow.
 
 Some other noteworthy design differences between the Conda and pypi ecosystems:
+
 * Conda environments are typically "global" and designed to be shared among multiple projects. You can "activate" them in your shell from any location on your system. This often leads to situations where Conda environments are even shared among multiple users. Normal virtual environments typically exist at the project level, and should only be activated when you are in the project directory.
 * pypi.org has a single namespace for packages. Once a name is taken, you can no longer use that name to publish a package. Anaconda.org is split into different "channels" so everyone can publish their own version of numpy on their own channel. Mixing and matching packages from different channels is usually a bad idea as dependencies may not be compatible. The conda-forge channel is a community maintained channel that aims to make most software available using a consistent set of build tools. A few years ago, I made a long video on how you can contribute packages to conda-forge, you can check it out [here](https://youtu.be/8s5aj3sjuVE?si=d3xdO7O9WXejToZ3).
 
