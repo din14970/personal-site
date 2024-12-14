@@ -514,6 +514,28 @@ The fact that it is an all in one tool is simultaneously its greatest benefit as
 * Only able to deal with packages that can be installed with pip
 * Does not support complex package builds
 
+#### PDM (Edit 14/12/2024)
+When I shared this article online, I was asked why I did not mention [PDM](https://pdm-project.org/en/latest/).
+The honest reason was because I had not heard of it.
+I also have not used PDM.
+PDM seems to be in many ways like Poetry, but better.
+Being newer, it does not carry the baggage of Poetry.
+It adheres to PEP standards with regards to the `pyproject.toml` file.
+But it is still a tool written in Python with quite some dependencies, which comes with some drawbacks.
+For completeness I mention it here, please let me know in the comments if I've missed something critical about PDM.
+
+##### Capabilities:
+* Mostly the same as Poetry
+
+##### Advantages:
+* Adheres to PEP standards
+* Can use `uv` (see later) for dependency resolution and installation
+* You can use the `PDM` build back-end independently from PDM
+
+##### Disadvantages:
+* Mostly the same as Poetry
+
+
 #### pyenv
 Until now, all of our tooling assumed Python was already installed on the system.
 All these tools used the virtual environment as isolation level.
@@ -556,6 +578,13 @@ Installing all the relevant dependencies on Windows, like a C compiler, can be q
 * Installing a new Python version requires downloading and compiling the source code
 * Can require a bit of set-up the first time to get it to work. Quite a few build dependencies must be installed.
 * No Windows support.
+
+##### Edit 14/12/2024
+The reddit user [AndydeCleyre](https://www.reddit.com/user/AndydeCleyre/) informed me of [mise](https://github.com/jdx/mise).
+Mise does everything pyenv does and more.
+You can use it to install different versions of not only Python, but also other language runtimes like Node.
+In addition, it's a task runner like Make and allows you to set environment variables automatically based on your current directory like direnv.
+I have not used the tool myself, but it seems like a worthwhile tool to mention here.
 
 #### pipx
 Most of the tools we have discussed previously suffered from being written in Python themselves.
@@ -699,8 +728,7 @@ all code that needs to be compiled is already compiled), so installation is fast
 No undeclared build dependencies required for compiling stuff on the side of the user.
 
 You might think that, with the introduction of wheels as distribution format on Pypi, Conda is entirely obsolete.
-For installing most Python packages or statically linked binaries (e.g.
-DuckDB) this is mostly true.
+For installing most Python packages or statically linked binaries (e.g. DuckDB) this is mostly true.
 However, for anything else, Conda remains far superior, which is why it still shines in the data science and scientific Python space. 
 
 Compared to pip, Conda has a much broader definition of what constitutes "a package".
@@ -739,6 +767,8 @@ Some other noteworthy design differences between the Conda and pypi ecosystems:
 * Conda environments are typically "global" and designed to be shared among multiple projects. You can "activate" them in your shell from any location on your system. This often leads to situations where Conda environments are even shared among multiple users. Normal virtual environments typically exist at the project level, and should only be activated when you are in the project directory.
 * pypi.org has a single namespace for packages. Once a name is taken, you can no longer use that name to publish a package. Anaconda.org is split into different "channels" so everyone can publish their own version of numpy on their own channel. Mixing and matching packages from different channels is usually a bad idea as dependencies may not be compatible. The conda-forge channel is a community maintained channel that aims to make most software available using a consistent set of build tools. A few years ago, I made a long video on how you can contribute packages to conda-forge, you can check it out [here](https://youtu.be/8s5aj3sjuVE?si=d3xdO7O9WXejToZ3).
 
+**Edit 14/12/2024**: on Reddit, [Peter Wang](https://www.anaconda.com/about-us/leadership/peter-wang) from Anaconda shared a relevant talk with regards to Python packaging underneath a thread where this article was shared, which relates to this paragraph and which I can highly recommend: < https://www.youtube.com/watch?v=qA7NVwmx3gw>.
+
 ##### Capabilities:
 * Install any type of software and libraries at the user level
 * Manage Python versions
@@ -753,8 +783,8 @@ Some other noteworthy design differences between the Conda and pypi ecosystems:
 * Option for global and shared environments
 
 ##### Disadvantages:
-* Slow, written in Python
-* Serial downloads of packages
+* Slow, written in Python (should no longer be true since 2022, version 22.11, as pointed out by Kevin Markham, see [this post](https://www.anaconda.com/blog/conda-is-fast-now))
+* Serial downloads of packages (should no longer be true since 2022, version 22.11, as pointed out by Kevin Markham, see [this post](https://www.anaconda.com/blog/conda-is-fast-now))
 * Somewhat intrusive installation process (modifies shell config)
 * Limited interoperability with the "main" Python ecosystem
 * No lock file
@@ -777,7 +807,7 @@ The recommended approach is now to entirely sidestep Conda and install [miniforg
 * Micromamba is distributed as single statically linked executable
 
 ##### Disadvantages:
-* Same as Conda except it is fast
+* Same as Conda except it is fast (if you use conda >= 22.11, then it uses the mamba resolver)
 
 #### conda-lock
 [conda-lock](https://github.com/conda/conda-lock) is the pip-tools of the Conda ecosystem.
@@ -974,6 +1004,12 @@ At this moment I would not advise Nix to the average Python developer, but it is
 * An ecosystem on its own, very poor interoperability
 * Small community, poor documentation
 * Arcane domain specific functional language to write configuration
+
+##### Edit 14/12/2024
+
+Brandon Maier reached out to me via e-mail and pointed out that an important downside of Nix is that you must first be root to set it up.
+This is because the `/nix/store` needs to be initialized.
+He also informed me of two interesting projects in the `Nix` ecosystem: [Nix-portable](https://github.com/DavHau/nix-portable) which aims to make Nix work without admin privileges, and [devenv](https://devenv.sh/) which aims to make Nix more accessible for managing a project lifecycle.
 
 ## What should you use?
 Ok, but can't I just tell you what you should use? That's what these types of articles are all about right?
